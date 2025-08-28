@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMEN</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Tipografía alternativa a “Railey”: Raleway -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+  <meta name="description" content="LUMEN — Oráculo místico y Blog de astrología, tarot y curiosidades.">
+</head>
+<body>
+  <!-- Pantalla de inicio -->
+  <section id="home" class="active">
+    <h1 class="logo">LUMEN</h1>
+    <div class="menu">
+      <div class="option" onclick="openSection('oracle')">Oráculo</div>
+      <div class="option" onclick="openSection('blog')">Blog</div>
+      <!-- NUEVO: apartado independiente -->
+      <div class="option" onclick="openSection('nosotros')">Nosotros</div>
+    </div>
+  </section>
+
+  <!-- Sección Oráculo -->
+  <section id="oracle" class="hidden">
+    <h2>Oráculo</h2>
+    <p>Haz tu pregunta y descubre la respuesta... 🔮 </p>
+    <input type="text" id="oracleQuestion" placeholder="Escribe tu pregunta...">
+    <button onclick="askOracle()">Preguntar</button>
+    <p id="oracleAnswer"></p>
+    <button class="btn-back" onclick="goHome()">Volver</button>
+  </section>
+
+  <!-- Sección Blog -->
+  <section id="blog" class="hidden">
+    <header class="blog-header">
+      <h3 class="logo">LUMEN</h3>
+      <nav class="blog-nav">
+        <a href="#" class="nav-link" data-filter="Astrología">Astrología</a>
+        <a href="#" class="nav-link" data-filter="Tarot">Tarot</a>
+        <a href="#" class="nav-link" data-filter="Curiosidades">Curiosidades</a>
+      </nav>
+    </header>
+
+    <main class="blog-wrap">
+      <h1>Blog de LUMEN</h1>
+      <p class="sub">
+        Explora artículos de <strong>Astrología</strong>, <strong>Tarot</strong> y <strong>Curiosidades</strong>.
+        Haz clic en un título para leerlo en pantalla completa.
+      </p>
+
+      <!-- Aquí el JS pinta los posts (solo títulos) -->
+      <div id="blog-posts" class="posts"></div>
+
+      <button class="btn-back" onclick="goHome()">Volver</button>
+    </main>
+
+    <!-- Modal de lectura a pantalla completa -->
+    <div id="postModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closePost()" aria-label="Cerrar">×</button>
+        <span id="modalTag" class="tag"></span>
+        <h2 id="modalTitle"></h2>
+        <div id="modalMeta" class="meta"></div>
+        <div id="modalBody" class="modal-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Nosotros (APARTADO INDEPENDIENTE) -->
+  <section id="nosotros" class="hidden">
+    <h2>Nosotros</h2>
+
+    <div class="about-flex">
+      <div class="about-text">
+        <p>
+          LUMEN es un espacio creado para explorar lo místico con un enfoque cálido y moderno.
+          Aquí conectas intención y curiosidad, descubres símbolos y prácticas espirituales
+          accesibles, y encuentras lecturas que invitan a la reflexión. Nuestro propósito es
+          acompañar tu búsqueda interior con belleza, claridad y sentido.
+        </p>
+
+        <ul class="about-list">
+          <li>Conexión y propósito</li>
+          <li>Explorar la curiosidad</li>
+          <li>Contenido místico y espiritual</li>
+          <li>Vive una nueva experiencia</li>
+        </ul>
+      </div>
+
+      <div class="about-media">
+        <!-- Imagen mostrada + enlace al pin -->
+        <a href="https://co.pinterest.com/pin/4597119806558984192/" target="_blank" rel="noopener">
+          <img
+            src="https://i.pinimg.com/originals/4a/39/5a/4a395a2d6d0fd7961a6a0df3b8f01f2a.jpg"
+            alt="Ilustración mística representando el espíritu de LUMEN">
+        </a>
+        <small class="muted">Ver en Pinterest</small>
+      </div>
+    </div>
+
+    <button class="btn-back" onclick="goHome()">Volver</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
