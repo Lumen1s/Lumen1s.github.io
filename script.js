@@ -30,10 +30,6 @@ function goHome() {
    Oráculo (respuestas aleatorias)
    ========================= */
 function askOracle() {
-  const input = document.getElementById("oracleQuestion");
-  const q = (input?.value || "").trim();
-
-  // Sin filtro aquí: si hay texto y quieres, puedes mantener solo la respuesta azar
   const respuestas = [
     "El destino sonríe a tu favor 🌙",
     "Debes tener paciencia ✨",
@@ -43,11 +39,12 @@ function askOracle() {
     "Cuidado, no todo es lo que parece 🌑"
   ];
   const randomIndex = Math.floor(Math.random() * respuestas.length);
-  document.getElementById("oracleAnswer").innerText = respuestas[randomIndex];
+  const box = document.getElementById("oracleAnswer");
+  if (box) box.innerText = respuestas[randomIndex];
 }
 
 /* =========================
-   Oráculo — Filtro (actualizado a multi-palabra)
+   Oráculo — Filtro (multi-palabra con ranking)
    ========================= */
 function runOracleFilter() {
   const input = document.getElementById("oracleFilter");
@@ -75,16 +72,16 @@ function runOracleFilter() {
     </div>
   `).join("");
 
-  // abre el post (modal) al hacer clic
+  // abrir en modal del ORÁCULO (aquí mismo)
   box.querySelectorAll(".filter-item").forEach(el => {
     el.addEventListener("click", () => {
       const idx = Number(el.getAttribute("data-index"));
-      openPost(idx);
+      openPost(idx, 'oracle');
     });
   });
 }
 
-// Enter para ejecutar el filtro
+// Enter en el campo del filtro
 document.addEventListener("DOMContentLoaded", () => {
   const fi = document.getElementById("oracleFilter");
   if (fi) {
@@ -122,33 +119,23 @@ const posts = [
 ];
 
 /* =========================
-   Búsqueda de posts (multi-palabra, coincidencias parciales)
+   Búsqueda de posts (multi-palabra, coincidencias parciales con ranking)
    ========================= */
 function searchPosts(query) {
-  // tokeniza y normaliza (soporta tildes y números)
-  const terms = (query || "")
-    .toLowerCase()
-    .match(/[a-záéíóúüñ0-9]+/gi);
-
+  const terms = (query || "").toLowerCase().match(/[a-záéíóúüñ0-9]+/gi);
   if (!terms || !terms.length) return { results: [], indices: [], scores: [] };
 
-  // calcula un "score" = cuántas palabras de la consulta aparecen en el post
   const scored = [];
   posts.forEach((p, i) => {
     const haystack = `${p.titulo} ${p.categoria} ${p.contenido}`.toLowerCase();
     let score = 0;
     terms.forEach(t => { if (haystack.includes(t)) score++; });
     if (score > 0) {
-      scored.push({
-        p,
-        i,
-        score,
-        date: new Date(p.fecha || "1970-01-01")
-      });
+      scored.push({ p, i, score, date: new Date(p.fecha || "1970-01-01") });
     }
   });
 
-  // ordena: primero mejor score, luego fecha más reciente
+  // Orden: mejor score → fecha más reciente
   scored.sort((a, b) => (b.score - a.score) || (b.date - a.date));
 
   return {
@@ -157,6 +144,7 @@ function searchPosts(query) {
     scores: scored.map(x => x.score)
   };
 }
+
 /* =========================
    Utilidades del Blog
    ========================= */
@@ -189,7 +177,7 @@ function renderPosts(list, indices) {
   container.querySelectorAll(".post-card").forEach(card => {
     card.addEventListener("click", () => {
       const idx = Number(card.getAttribute("data-index"));
-      openPost(idx);
+      openPost(idx, 'blog');
     });
   });
 }
@@ -197,23 +185,44 @@ function renderPosts(list, indices) {
 /* =========================
    Modal de lectura a pantalla completa
    ========================= */
-function openPost(idx) {
+// Abre un post en modal, en el contexto indicado: 'blog' (default) o 'oracle'
+function openPost(idx, context = 'blog') {
   const p = posts[idx];
   if (!p) return;
 
-  document.getElementById("modalTag").textContent = p.categoria || "";
-  document.getElementById("modalTitle").textContent = p.titulo || "";
-  document.getElementById("modalMeta").textContent = formatearFecha(p.fecha || "");
-  document.getElementById("modalBody").innerHTML = p.contenido || "";
+  const ids = (context === 'oracle') ? {
+    modal: 'oracleModal',
+    tag: 'oracleModalTag',
+    title: 'oracleModalTitle',
+    meta: 'oracleModalMeta',
+    body: 'oracleModalBody'
+  } : {
+    modal: 'postModal',
+    tag: 'modalTag',
+    title: 'modalTitle',
+    meta: 'modalMeta',
+    body: 'modalBody'
+  };
 
-  const modal = document.getElementById("postModal");
-  modal.classList.remove("hidden");
-  document.body.style.overflow = "hidden";
+  document.getElementById(ids.tag).textContent = p.categoria || "";
+  document.getElementById(ids.title).textContent = p.titulo || "";
+  document.getElementById(ids.meta).textContent = formatearFecha(p.fecha || "");
+  document.getElementById(ids.body).innerHTML = p.contenido || "";
+
+  const modal = document.getElementById(ids.modal);
+  if (modal) {
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  }
 }
 
-function closePost() {
-  const modal = document.getElementById("postModal");
-  modal.classList.add("hidden");
+function closePost(modalId = null) {
+  if (modalId) {
+    const m = document.getElementById(modalId);
+    if (m) m.classList.add("hidden");
+  } else {
+    document.querySelectorAll('.modal:not(.hidden)').forEach(m => m.classList.add('hidden'));
+  }
   document.body.style.overflow = "";
 }
 
