@@ -190,3 +190,83 @@ h1, h2, h3 { font-weight: 900; letter-spacing: .06em; }
 /* Helpers de visibilidad */
 .hidden { display: none; }
 .active { display: block; }
+/* ===== Oráculo — Filtro ===== */
+.oracle-filter{
+  margin: 1.2rem auto 0;
+  max-width: 720px;
+  text-align: left;
+}
+.oracle-filter h3{
+  margin: .8rem 0 .5rem 0;
+  font-weight: 900;
+  color: var(--dust-storm);
+}
+.filter-row{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .6rem;
+}
+.filter-input{
+  background: rgba(72,42,65,0.45);
+  border: 1px solid rgba(206,178,189,0.45);
+  color: var(--dust-storm);
+  padding: .8rem 1rem;
+  border-radius: 12px;
+}
+.filter-btn{
+  background: var(--mountbatten-pink);
+  color: var(--dust-storm);
+  border: 1px solid rgba(206,178,189,0.55);
+  padding: .8rem 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.filter-btn:hover{ filter: brightness(1.05); }
+
+.filter-results{
+  margin-top: .75rem;
+  max-height: 260px;           /* hace que sea scrolleable si hay muchas */
+  overflow-y: auto;
+  border: 1px solid rgba(206,178,189,0.35);
+  border-radius: 12px;
+  background: rgba(72,42,65,0.25);
+  padding: .4rem;
+}
+.filter-item{
+  display: block;
+  text-align: left;
+  padding: .6rem .7rem;
+  border-radius: 10px;
+  border: 1px solid rgba(206,178,189,0.25);
+  background: rgba(142,118,146,0.18);
+  margin: .35rem 0;
+  cursor: pointer;
+}
+.filter-item:hover{
+  background: rgba(206,178,189,0.22);
+  color: var(--dark-puce);
+}
+.filter-item .title{
+  font-weight: 800;
+}
+.filter-item .meta{
+  font-size: .85rem;
+  color: var(--pale-silver);
+}
+
+/* Botón de "sin resultados" con degradado dentro de la paleta */
+.btn-no-results{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: .4rem 0;
+  padding: .9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(206,178,189,0.45);
+  font-weight: 900;
+  cursor: default;
+  background: linear-gradient(120deg, var(--japanese-violet), var(--mountbatten-pink));
+  color: var(--dust-storm);
+}
+
