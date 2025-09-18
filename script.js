@@ -108,10 +108,8 @@ const posts = [
  introspección, guía y autoconocimiento. Se divide en 22 Arcanos Mayores, que representan grandes
  lecciones y etapas de la vida, y 56 Arcanos Menores, que hablan de lo cotidiano: emociones, trabajo,
  pensamientos y acciones.
- `
-  {
 
-   Arcanos Mayores:`
+   Arcanos Mayores:
     
  0. El Loco: Nuevos comienzos, libertad, aventura.
  1. El Mago: Creatividad, acción y poder personal.
