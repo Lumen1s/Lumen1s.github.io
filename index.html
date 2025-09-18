@@ -24,7 +24,6 @@
     <div class="menu">
       <div class="option" onclick="openSection('oracle')">Oráculo</div>
       <div class="option" onclick="openSection('blog')">Blog</div>
-      <!-- Apartado independiente -->
       <div class="option" onclick="openSection('nosotros')">Nosotros</div>
     </div>
   </section>
@@ -37,16 +36,25 @@
     <button onclick="askOracle()">Preguntar</button>
     <p id="oracleAnswer"></p>
 
-    <!-- NUEVO: Filtro por palabra clave (resultados abajo, scrolleables) -->
+    <!-- Filtro por palabra clave (resultados abajo, scrolleables) -->
     <div class="oracle-filter">
       <h3>Filtro</h3>
       <div class="filter-row">
-        <input type="text" id="oracleFilter" class="filter-input" placeholder="Escribe una palabra (ej: tarot, luna, carta)...">
+        <input type="text" id="oracleFilter" class="filter-input" placeholder="Escribe una o varias palabras (ej: carta tarot semana)">
         <button class="filter-btn" onclick="runOracleFilter()">Buscar</button>
       </div>
-
-      <!-- Contenedor de resultados -->
       <div id="oracleFilterResults" class="filter-results" aria-live="polite"></div>
+    </div>
+
+    <!-- Modal de lectura a pantalla completa (ORÁCULO) -->
+    <div id="oracleModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="oracleModalTitle">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closePost('oracleModal')" aria-label="Cerrar">×</button>
+        <span id="oracleModalTag" class="tag"></span>
+        <h2 id="oracleModalTitle"></h2>
+        <div id="oracleModalMeta" class="meta"></div>
+        <div id="oracleModalBody" class="modal-body"></div>
+      </div>
     </div>
 
     <button class="btn-back" onclick="goHome()">Volver</button>
@@ -76,10 +84,10 @@
       <button class="btn-back" onclick="goHome()">Volver</button>
     </main>
 
-    <!-- Modal de lectura a pantalla completa -->
+    <!-- Modal de lectura a pantalla completa (BLOG) -->
     <div id="postModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal-content">
-        <button class="modal-close" onclick="closePost()" aria-label="Cerrar">×</button>
+        <button class="modal-close" onclick="closePost('postModal')" aria-label="Cerrar">×</button>
         <span id="modalTag" class="tag"></span>
         <h2 id="modalTitle"></h2>
         <div id="modalMeta" class="meta"></div>
@@ -88,7 +96,7 @@
     </div>
   </section>
 
-  <!-- Sección Nosotros (APARTADO INDEPENDIENTE, sin Pinterest) -->
+  <!-- Sección Nosotros (independiente, sin Pinterest) -->
   <section id="nosotros" class="hidden">
     <h2>Nosotros</h2>
     <div class="about-flex">
