@@ -1,16 +1,22 @@
 /* =========================
    Navegación entre secciones
    ========================= */
-function openSection(sectionId) {
+function openSection(sectionId, initialList = null, initialIndices = null) {
   document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
   const target = document.getElementById(sectionId);
   if (target) {
     target.classList.remove("hidden");
-    // Si es blog, render inicial de posts
+
+    // Si es blog, render inicial (o lista filtrada si se pasa)
     if (sectionId === "blog") {
-      renderPosts(posts);
+      if (initialList) {
+        renderPosts(initialList, initialIndices);
+      } else {
+        renderPosts(posts);
+      }
       document.querySelectorAll(".blog-nav .nav-link").forEach(a => a.classList.remove("active"));
     }
+
     // Llevar el scroll arriba al entrar a cualquier apartado
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -22,9 +28,27 @@ function goHome() {
 }
 
 /* =========================
-   Oráculo (respuestas aleatorias)
+   Oráculo (respuestas aleatorias + búsqueda)
    ========================= */
 function askOracle() {
+  const input = document.getElementById("oracleQuestion");
+  const q = (input?.value || "").trim();
+
+  // Si hay texto, lo usamos como filtro de posts
+  if (q.length > 0) {
+    const { results, indices } = searchPosts(q);
+    // Abre el Blog con la lista filtrada (si no hay resultados, el blog mostrará el mensaje vacío)
+    openSection("blog", results, indices);
+    // Mensaje breve en el oráculo (opcional, no bloqueante)
+    const msg = results.length
+      ? `Mostrando ${results.length} artículo(s) para “${q}”.`
+      : `No encontré artículos para “${q}”.`;
+    const answer = document.getElementById("oracleAnswer");
+    if (answer) answer.textContent = msg;
+    return;
+  }
+
+  // Si NO hay texto, responde como antes (azar)
   const respuestas = [
     "El destino sonríe a tu favor 🌙",
     "Debes tener paciencia ✨",
@@ -33,7 +57,6 @@ function askOracle() {
     "Camina con fe y encontrarás el camino 🔥",
     "Cuidado, no todo es lo que parece 🌑"
   ];
-
   const randomIndex = Math.floor(Math.random() * respuestas.length);
   document.getElementById("oracleAnswer").innerText = respuestas[randomIndex];
 }
@@ -63,6 +86,23 @@ const posts = [
 ];
 
 /* =========================
+   Búsqueda de posts
+   ========================= */
+function searchPosts(query) {
+  const q = query.toLowerCase();
+  const results = [];
+  const indices = [];
+  posts.forEach((p, i) => {
+    const haystack = `${p.titulo} ${p.categoria} ${p.contenido}`.toLowerCase();
+    if (haystack.includes(q)) {
+      results.push(p);
+      indices.push(i);
+    }
+  });
+  return { results, indices };
+}
+
+/* =========================
    Utilidades del Blog
    ========================= */
 function formatearFecha(iso) {
@@ -78,12 +118,13 @@ function renderPosts(list, indices) {
   const container = document.getElementById("blog-posts");
   if (!container) return;
 
-  if (!indices) indices = list.map(p => posts.indexOf(p));
-
-  if (!list.length) {
+  if (!list || !list.length) {
     container.innerHTML = `<p class="muted">No hay artículos en esta categoría aún.</p>`;
     return;
   }
+
+  // Si no recibimos índices, los calculamos contra el arreglo original
+  if (!indices) indices = list.map(p => posts.indexOf(p));
 
   // Solo título en la tarjeta (clic abre modal)
   container.innerHTML = list.map((p, i) => `
