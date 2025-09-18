@@ -2,14 +2,13 @@
 <html lang="es">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGYXPZF946"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XGYXPZF946');
-</script>	
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGYXPZF946"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XGYXPZF946');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LUMEN</title>
@@ -25,7 +24,7 @@
     <div class="menu">
       <div class="option" onclick="openSection('oracle')">Oráculo</div>
       <div class="option" onclick="openSection('blog')">Blog</div>
-      <!-- NUEVO: apartado independiente -->
+      <!-- Apartado independiente -->
       <div class="option" onclick="openSection('nosotros')">Nosotros</div>
     </div>
   </section>
@@ -37,6 +36,19 @@
     <input type="text" id="oracleQuestion" placeholder="Escribe tu pregunta...">
     <button onclick="askOracle()">Preguntar</button>
     <p id="oracleAnswer"></p>
+
+    <!-- NUEVO: Filtro por palabra clave (resultados abajo, scrolleables) -->
+    <div class="oracle-filter">
+      <h3>Filtro</h3>
+      <div class="filter-row">
+        <input type="text" id="oracleFilter" class="filter-input" placeholder="Escribe una palabra (ej: tarot, luna, carta)...">
+        <button class="filter-btn" onclick="runOracleFilter()">Buscar</button>
+      </div>
+
+      <!-- Contenedor de resultados -->
+      <div id="oracleFilterResults" class="filter-results" aria-live="polite"></div>
+    </div>
+
     <button class="btn-back" onclick="goHome()">Volver</button>
   </section>
 
@@ -76,30 +88,27 @@
     </div>
   </section>
 
-  <!-- Sección Nosotros (APARTADO INDEPENDIENTE) -->
-<section id="nosotros" class="hidden">
-  <h2>Nosotros</h2>
-
-  <div class="about-flex">
-    <div class="about-text">
-      <p>
-        LUMEN es un espacio creado para explorar lo místico con un enfoque cálido y moderno.
-        Aquí conectas intención y curiosidad, descubres símbolos y prácticas espirituales
-        accesibles, y encuentras lecturas que invitan a la reflexión. Nuestro propósito es
-        acompañar tu búsqueda interior con belleza, claridad y sentido.
-      </p>
-
-      <ul class="about-list">
-        <li>Conexión y propósito</li>
-        <li>Explorar la curiosidad</li>
-        <li>Contenido místico y espiritual</li>
-        <li>Vive una nueva experiencia</li>
-      </ul>
+  <!-- Sección Nosotros (APARTADO INDEPENDIENTE, sin Pinterest) -->
+  <section id="nosotros" class="hidden">
+    <h2>Nosotros</h2>
+    <div class="about-flex">
+      <div class="about-text">
+        <p>
+          LUMEN es un espacio creado para explorar lo místico con un enfoque cálido y moderno.
+          Aquí conectas intención y curiosidad, descubres símbolos y prácticas espirituales
+          accesibles, y encuentras lecturas que invitan a la reflexión. Nuestro propósito es
+          acompañar tu búsqueda interior con belleza, claridad y sentido.
+        </p>
+        <ul class="about-list">
+          <li>Conexión y propósito</li>
+          <li>Explorar la curiosidad</li>
+          <li>Contenido místico y espiritual</li>
+          <li>Vive una nueva experiencia</li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  <button class="btn-back" onclick="goHome()">Volver</button>
-</section>
+    <button class="btn-back" onclick="goHome()">Volver</button>
+  </section>
 
   <script src="script.js"></script>
 </body>
