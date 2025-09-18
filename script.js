@@ -17,7 +17,6 @@ function openSection(sectionId, initialList = null, initialIndices = null) {
       document.querySelectorAll(".blog-nav .nav-link").forEach(a => a.classList.remove("active"));
     }
 
-    // Llevar el scroll arriba al entrar a cualquier apartado
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }
@@ -28,27 +27,13 @@ function goHome() {
 }
 
 /* =========================
-   Oráculo (respuestas aleatorias + búsqueda)
+   Oráculo (respuestas aleatorias)
    ========================= */
 function askOracle() {
   const input = document.getElementById("oracleQuestion");
   const q = (input?.value || "").trim();
 
-  // Si hay texto, lo usamos como filtro de posts
-  if (q.length > 0) {
-    const { results, indices } = searchPosts(q);
-    // Abre el Blog con la lista filtrada (si no hay resultados, el blog mostrará el mensaje vacío)
-    openSection("blog", results, indices);
-    // Mensaje breve en el oráculo (opcional, no bloqueante)
-    const msg = results.length
-      ? `Mostrando ${results.length} artículo(s) para “${q}”.`
-      : `No encontré artículos para “${q}”.`;
-    const answer = document.getElementById("oracleAnswer");
-    if (answer) answer.textContent = msg;
-    return;
-  }
-
-  // Si NO hay texto, responde como antes (azar)
+  // Sin filtro aquí: si hay texto y quieres, puedes mantener solo la respuesta azar
   const respuestas = [
     "El destino sonríe a tu favor 🌙",
     "Debes tener paciencia ✨",
@@ -60,6 +45,57 @@ function askOracle() {
   const randomIndex = Math.floor(Math.random() * respuestas.length);
   document.getElementById("oracleAnswer").innerText = respuestas[randomIndex];
 }
+
+/* =========================
+   Oráculo — Filtro (actualizado a multi-palabra)
+   ========================= */
+function runOracleFilter() {
+  const input = document.getElementById("oracleFilter");
+  const q = (input?.value || "").trim();
+  const box = document.getElementById("oracleFilterResults");
+  if (!box) return;
+
+  if (!q) {
+    box.innerHTML = "";
+    return;
+  }
+
+  const { results, indices, scores } = searchPosts(q);
+
+  if (!results.length) {
+    box.innerHTML = `<button class="btn-no-results" type="button" disabled>Aún no hay resultados para esta palabra</button>`;
+    return;
+  }
+
+  // pinta resultados (scrolleables) mostrando cuántas palabras coincidieron
+  box.innerHTML = results.map((p, i) => `
+    <div class="filter-item" data-index="${indices[i]}">
+      <div class="title">${p.titulo}</div>
+      <div class="meta">${p.categoria} · ${formatearFecha(p.fecha)} · ${scores[i]} coincidencia(s)</div>
+    </div>
+  `).join("");
+
+  // abre el post (modal) al hacer clic
+  box.querySelectorAll(".filter-item").forEach(el => {
+    el.addEventListener("click", () => {
+      const idx = Number(el.getAttribute("data-index"));
+      openPost(idx);
+    });
+  });
+}
+
+// Enter para ejecutar el filtro
+document.addEventListener("DOMContentLoaded", () => {
+  const fi = document.getElementById("oracleFilter");
+  if (fi) {
+    fi.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        runOracleFilter();
+      }
+    });
+  }
+});
 
 /* =========================
    Blog — Datos en memoria (EDITABLES)
@@ -86,22 +122,41 @@ const posts = [
 ];
 
 /* =========================
-   Búsqueda de posts
+   Búsqueda de posts (multi-palabra, coincidencias parciales)
    ========================= */
 function searchPosts(query) {
-  const q = query.toLowerCase();
-  const results = [];
-  const indices = [];
+  // tokeniza y normaliza (soporta tildes y números)
+  const terms = (query || "")
+    .toLowerCase()
+    .match(/[a-záéíóúüñ0-9]+/gi);
+
+  if (!terms || !terms.length) return { results: [], indices: [], scores: [] };
+
+  // calcula un "score" = cuántas palabras de la consulta aparecen en el post
+  const scored = [];
   posts.forEach((p, i) => {
     const haystack = `${p.titulo} ${p.categoria} ${p.contenido}`.toLowerCase();
-    if (haystack.includes(q)) {
-      results.push(p);
-      indices.push(i);
+    let score = 0;
+    terms.forEach(t => { if (haystack.includes(t)) score++; });
+    if (score > 0) {
+      scored.push({
+        p,
+        i,
+        score,
+        date: new Date(p.fecha || "1970-01-01")
+      });
     }
   });
-  return { results, indices };
-}
 
+  // ordena: primero mejor score, luego fecha más reciente
+  scored.sort((a, b) => (b.score - a.score) || (b.date - a.date));
+
+  return {
+    results: scored.map(x => x.p),
+    indices: scored.map(x => x.i),
+    scores: scored.map(x => x.score)
+  };
+}
 /* =========================
    Utilidades del Blog
    ========================= */
@@ -123,10 +178,8 @@ function renderPosts(list, indices) {
     return;
   }
 
-  // Si no recibimos índices, los calculamos contra el arreglo original
   if (!indices) indices = list.map(p => posts.indexOf(p));
 
-  // Solo título en la tarjeta (clic abre modal)
   container.innerHTML = list.map((p, i) => `
     <article class="post post-card" data-index="${indices[i]}">
       <h2>${p.titulo}</h2>
@@ -198,3 +251,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
