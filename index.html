@@ -13,7 +13,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LUMEN</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Tipografía alternativa a “Railey”: Raleway -->
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
   <meta name="description" content="LUMEN — Oráculo místico y Blog de astrología, tarot y curiosidades.">
 </head>
@@ -36,7 +35,7 @@
     <button onclick="askOracle()">Preguntar</button>
     <p id="oracleAnswer"></p>
 
-    <!-- Filtro por palabra clave (resultados abajo, scrolleables) -->
+    <!-- Filtro -->
     <div class="oracle-filter">
       <h3>Filtro</h3>
       <div class="filter-row">
@@ -46,7 +45,7 @@
       <div id="oracleFilterResults" class="filter-results" aria-live="polite"></div>
     </div>
 
-    <!-- Modal de lectura a pantalla completa (ORÁCULO) -->
+    <!-- Modal (ORÁCULO) -->
     <div id="oracleModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="oracleModalTitle">
       <div class="modal-content">
         <button class="modal-close" onclick="closePost('oracleModal')" aria-label="Cerrar">×</button>
@@ -78,13 +77,12 @@
         Haz clic en un título para leerlo en pantalla completa.
       </p>
 
-      <!-- Aquí el JS pinta los posts (solo títulos) -->
       <div id="blog-posts" class="posts"></div>
 
       <button class="btn-back" onclick="goHome()">Volver</button>
     </main>
 
-    <!-- Modal de lectura a pantalla completa (BLOG) -->
+    <!-- Modal (BLOG) -->
     <div id="postModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal-content">
         <button class="modal-close" onclick="closePost('postModal')" aria-label="Cerrar">×</button>
