@@ -262,3 +262,22 @@ h1, h2, h3 { font-weight: 900; letter-spacing: .06em; }
 /* Helpers de visibilidad */
 .hidden { display: none; }
 .active { display: block; }
+/* ... (tu CSS actual aquí) ... */
+
+/* === Mejora de lectura dentro de los modales (párrafos, listas, medios) === */
+.modal-body { line-height: 1.8; color: var(--dust-storm); }
+.modal-body p { margin: 0 0 14px 0; }
+.modal-body h2, .modal-body h3, .modal-body h4 { margin: 18px 0 10px; }
+.modal-body ul, .modal-body ol { margin: 0 0 14px 1.2rem; padding-left: 1.1rem; }
+.modal-body li { margin: 6px 0; }
+.modal-body img, .modal-body video, .modal-body iframe {
+  max-width: 100%; height: auto; border-radius: 12px;
+  border: 1px solid rgba(206,178,189,0.35); box-shadow: 0 10px 24px rgba(72,42,65,.30);
+  display: block; margin: 10px auto 16px auto;
+}
+
+/* Tarjetas del blog — ya lo tienes, no lo borro por si ya está igual */
+.posts{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; margin-top:1.25rem; }
+.post{ background:rgba(72,42,65,.35); border:1px solid rgba(206,178,189,.35); border-radius:16px; padding:1rem; cursor:pointer; box-shadow:0 10px 24px rgba(72,42,65,.30); }
+.post:hover{ transform:translateY(-2px); box-shadow:0 12px 28px rgba(87,46,84,.35); }
+
