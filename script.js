@@ -118,31 +118,46 @@ const posts = [
   },
 
   {
-    titulo: "Tarot — Artículo de blog",
+    titulo: "Los inicios del Tarot: historia y simbolismo",
     categoria: "Tarot",
     fecha: "2025-09-01",
     contenido: `
       <!-- Basado en: articulo_tarot_blog.pdf -->
 
       <!-- PORTADA / INTRO -->
-      <h2>Introducción</h2>
-      <p>Pega aquí la introducción completa del PDF.</p>
+      <h2>¿Qué es?</h2>
+      <p>El tarot, reconocido hoy como una poderosa herramienta de adivinación y autoconocimiento, tiene sus raíces en la Europa del siglo XV. Su origen más documentado se encuentra en Italia, donde surgió como un mazo de cartas utilizado en un juego llamado tarocchi. En aquella época no estaba asociado con lo místico, sino que servía principalmente como entretenimiento para las cortes nobles, acompañado de elaboradas ilustraciones que decoraban las cartas.</p>
+      <p>Las imágenes de los Arcanos Mayores rápidamente llamaron la atención. Estas cartas mostraban figuras cargadas de simbolismo —como El Mago, La Emperatriz o La Muerte— que representaban arquetipos humanos y fuerzas universales. Aunque al principio eran solo parte del diseño artístico, con el tiempo comenzaron a ser interpretadas como expresiones filosóficas y espirituales.</p>
       <img src="assets/img/MI_IMAGEN.jpg" alt="Portada del artículo de Tarot" />
 
       <!-- SECCIONES PRINCIPALES -->
       <h2>Historia y contexto</h2>
-      <p>Pega aquí la sección de historia / contexto.</p>
+      <p>Durante el Renacimiento, periodo caracterizado por el auge del conocimiento y el redescubrimiento de
+tradiciones antiguas, el tarot fue vinculado con la filosofía hermética, la alquimia y la astrología. Los
+símbolos en las cartas fueron vistos como un puente hacia el entendimiento de los misterios del
+cosmos y de la condición humana, lo que permitió que trascendieran su función lúdica.</p>
 
-      <h2>Arcanos y simbología</h2>
-      <p>Pega aquí el contenido de simbología y arquetipos.</p>
-      <img src="assets/img/MI_IMAGEN.jpg" alt="Cartas y simbología" />
+<p>En el siglo XVIII, el interés por lo oculto y lo esotérico creció en Europa. Autores franceses como
+Antoine Court de Gébelin afirmaron que el tarot tenía un origen mucho más antiguo, vinculándolo con
+la sabiduría de Egipto y con la cábala judía. Aunque no existen pruebas históricas de esa afirmación,
+estas ideas alimentaron la percepción del tarot como una herencia mística de civilizaciones antiguas.</p>
 
-      <h2>Práctica y lecturas</h2>
-      <p>Pega aquí guías, ejemplos, interpretaciones y recomendaciones.</p>
+<p>El ocultista Jean-Baptiste Alliette, más conocido como Etteilla, fue uno de los primeros en sistematizar
+un método de lectura de tarot con fines adivinatorios. Su aporte marcó el inicio de la transición
+definitiva de las cartas como un simple pasatiempo hacia una herramienta de consulta espiritual.
+Desde entonces, surgieron múltiples mazos adaptados a distintas corrientes filosóficas y esotéricas.</p>
+
+<p>En el siglo XIX y principios del XX, sociedades ocultistas como la Hermetic Order of the Golden Dawn
+y figuras influyentes como Arthur Edward Waite consolidaron el tarot como práctica mística. De allí
+nació el famoso mazo Rider-Waite-Smith, ilustrado por Pamela Colman Smith, que se convirtió en la
+baraja más popular y la base de muchas de las interpretaciones modernas.</p>
 
       <!-- CIERRE -->
       <h2>Conclusión</h2>
-      <p>Pega aquí el cierre completo del PDF.</p>
+      <p>Hoy, el tarot es una herramienta universal que trasciende el ámbito de la adivinación. Muchos lo
+utilizan para reflexionar, meditar o explorar su propio mundo interior. Su fuerza radica en los símbolos
+atemporales que representan experiencias humanas compartidas, lo que lo convierte en un puente
+entre el pasado y el presente, entre lo lúdico y lo espiritual.</p>
     `
   },
 
