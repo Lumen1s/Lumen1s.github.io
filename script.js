@@ -171,7 +171,7 @@ entre el pasado y el presente, entre lo lúdico y lo espiritual.</p>
      ========================= */
 
   {
-    titulo: "Oráculos digitales — Sofía Muñoz",
+    titulo: "Oráculos digitales: la nueva magia del entretenimiento y la predicción",
     categoria: "Curiosidades",
     fecha: "2025-09-01",
     contenido: `
@@ -179,28 +179,80 @@ entre el pasado y el presente, entre lo lúdico y lo espiritual.</p>
 
       <!-- INTRO -->
       <h2>Introducción</h2>
-      <p>Pega aquí la introducción completa del PDF (contexto de oráculos digitales, definición, alcance).</p>
+      <p>Palabras clave: oráculo, entretenimiento, curiosidad, juego interactivo, predicción, misticismo,
+experiencias, redes sociales.</p>
+
+<p>Los oráculos han existido desde tiempos antiguos como guías espirituales. En la antigüedad,
+estos eran símbolos de misterio y sabiduría: santuarios, escrituras o ceremonias llenas de
+misticismo. Hoy en día, en un mundo digital y globalizado, esta fascinación no ha desaparecido,
+sino que se ha transformado en nuevas experiencias y creencias que mezclan misterio, juego y
+entretenimiento. Consultar un oráculo digital ya no es un acto ritualizado, sino una forma
+sencilla de explorar tu curiosidad y pasar un buen rato.</p>
+
+<p>Ya no vemos la magia en lo sobrenatural, sino en lo que se puede compartir, en lo que nos
+divierte y en lo que acompaña nuestra vida diaria.</p>
       <img src="assets/img/MI_IMAGEN.jpg" alt="Ilustración oráculos digitales" />
 
       <!-- SECCIONES -->
-      <h2>Oráculos digitales: concepto y evolución</h2>
-      <p>Pega aquí el desarrollo de la idea: del oráculo clásico a lo digital, ejemplos y plataformas.</p>
+      <h2>¿Qué es un oráculo digital?</h2>
+      <p>Un oráculo digital es mucho más que una simple plataforma online. Es un espacio interactivo
+que convierte cartas, símbolos o mensajes enigmáticos en una experiencia divertida y
+sorprendente. Conserva un toque de misterio, pero hoy su esencia es el juego, el cual busca
+sorprender, divertir y dar de qué hablar.</p>
 
-      <h2>Prácticas, usos y experiencias</h2>
-      <p>Pega aquí cómo las personas usan oráculos digitales: entretenimiento, autoexploración, comunidad.</p>
+<p>Algunos ejemplos pueden ser lecturas instantáneas que se convierten en contenido viral o
+filtros en redes sociales que mezclan azar con humor.</p>
+
+      <h2>Entretenimiento en un mundo digital</h2>
+      <p>Las personas actualmente buscan rapidez, si no logras enganchar y sorprender a tu público en
+segundos, puedes pasar al olvido con un swipe. En este contexto, los oráculos digitales son
+una herramienta diferente porque rompen la rutina diaria, generan momentos de risa y
+reflexión, y nos hacen sentir parte de algo colectivo al compartir resultados con amigos o en
+redes sociales.</p>
       <img src="assets/img/MI_IMAGEN.jpg" alt="Uso de apps y filtros oraculares" />
 
-      <h2>Imaginarios y percepciones</h2>
-      <p>Pega aquí reflexiones sobre creencias, expectativas, lo lúdico, lo espiritual, lo cultural.</p>
+      <h3>Entre curiosidad y diversión</h3>
+      <p>Los oráculos son como juegos interactivos que capturan la atención en pocos clics. Sus
+lecturas despiertan intriga, mientras que los resultados se convierten en contenido para redes
+sociales. Marianna Ruah-Midbar en su estudio Sacralization of Randomness: Theological
+Imagination and the Logic of Digital Divination Rituals (2014), menciona que las prácticas de
+adivinación en línea se han transformado en experiencias culturales que mezclan azar, juego y
+espectáculo, más ligadas al entretenimiento que a la espiritualidad tradiciona</p>
 
       <!-- CIERRE -->
+      <h2>¿Por qué atraen tanto los oráculos?</h2>
+      <p>El atractivo de un oráculo no está en ofrecer verdades absolutas, sino en despertar la
+curiosidad digital. En un mundo cargado de información, las personas buscan distracciones que
+combinen sorpresa y diversión. Consultar un mensaje aleatorio, descubrir una carta virtual o
+probar un filtro que predice tu futuro inmediato son experiencias que funcionan para esta
+necesidad. No se trata de creer o no creer, sino de dejarse llevar por la intriga y disfrutar del
+momento.</p>
+
+<p>Además, estos logran conectar con la audiencia. Cuando alguien obtiene un resultado curioso o
+gracioso, la reacción inmediata es mostrarlo en redes o enviarlo por chat. De esta manera, se
+convierten en una herramienta para generar conversación y reconocimiento, igual que antes lo
+hacían los rituales colectivos en los templos, pero ahora en un formato digital y viral.</p>
+
+      <h3>De lo místico a lo cotidiano</h3>
+      <p>Esta transformación refleja un cambio cultural profundo, debido a que lo ceremonial ha cedido
+espacio a experiencias rápidas, ligeras y compartibles. En lugar de desaparecer, los oráculos
+se han reinventado en el entorno digital, donde conviven con el humor y la inmediatez de las
+redes sociales. De esta manera, lo que antes estaba reservado para espacios sagrados ahora
+se vive como un entretenimiento personalizable y disponible en cualquier momento del día.</p>
+
       <h2>Conclusión</h2>
-      <p>Pega aquí el cierre completo del PDF (síntesis, impacto, perspectivas).</p>
+      <p>Los oráculos digitales representan la unión entre tradición y modernidad, entre misterio y
+entretenimiento. Funcionan como un espejo de nuestra generación, curiosa, conectada y
+siempre en busca de experiencias compartibles. Atrévete a explorar un oráculo online, déjate
+llevar por la curiosidad digital y comparte la experiencia. Al final, puede que descubras que la
+verdadera predicción no está en el futuro, sino en la forma en que disfrutamos el presente.</p>
+
+<p>Descubre tu mensaje hoy en LUMEN y deja que la magia digital te sorprenda.</p>
     `
   },
 
   {
-    titulo: "Magia Online — Sofía Muñoz",
+    titulo: "La magia online: ¿Cómo los oráculos digitales influyen en la juventud?",
     categoria: "Curiosidades",
     fecha: "2025-09-01",
     contenido: `
@@ -208,23 +260,80 @@ entre el pasado y el presente, entre lo lúdico y lo espiritual.</p>
 
       <!-- INTRO -->
       <h2>Introducción</h2>
-      <p>Pega aquí la introducción completa del PDF (qué se entiende por “magia online”, contexto, enfoque).</p>
-      <img src="assets/img/MI_IMAGEN.jpg" alt="Magia en entornos digitales" />
+      <p>Palabras clave: oráculo digital, adolescentes, jóvenes, entretenimiento, redes sociales,
+curiosidad, identidad, predicción, cultura digital.</p>
+
+<p>Los oráculos siempre han sido una herramienta utilizada para buscar respuestas y conectar
+con lo desconocido. Sin embargo, en la actualidad, estos han encontrado un nuevo público: los
+adolescentes y jóvenes. En un contexto donde la identidad, la personalidad, la curiosidad y la
+autoexpresión son tan importantes, los oráculos digitales se convierten en una experiencia
+divertida y diferente que forma parte de la vida cotidiana de esta generación.</p>
+
+<p>Hoy no es necesario acceder a ellos en templos con sacerdotes o especialistas en este tema,
+sino que gracias a los avances de la tecnología, con tu celular puedes consultarlos. Más que
+predicciones, son juegos culturales que marcan tendencias en redes sociales.</p>
 
       <!-- SECCIONES -->
-      <h2>Manifestaciones de la magia online</h2>
-      <p>Pega aquí prácticas, ejemplos, plataformas, comunidades.</p>
+      <h2>¿Por qué los oráculos digitales atraen tanto a los jóvenes?</h2>
+      <h3>La mezcla perfecta entre misterio y diversión</h3>
+      <p>Las nuevas generaciones buscan experiencias rápidas e inmediatas que sorprendan. Un filtro
+que te dice “qué energía tienes hoy” o “qué personaje eres según tu signo” despierta intriga en
+segundos. No importa si se cree o no en la predicción porque lo relevante es generar risas,
+identificación y conversación en el público.</p>
+ <h3>Construcción de identidad</h3>
+      <p>La psicóloga Sherry Turkle (MIT), en su investigación sobre jóvenes y tecnología, señala que
+“los entornos digitales ofrecen espejos interactivos que los adolescentes usan para explorar
+quiénes son” (Alone Together, 2011). Teniendo como referencia esto, podemos evidenciar que
+los oráculos digitales ofrecen frases y símbolos con las que los jóvenes se reconocen, juegan o
+cuestionan.</p>
 
-      <h2>Interacciones sociales y cultura digital</h2>
-      <p>Pega aquí dinámicas de redes, rituales compartidos, tendencias.</p>
+      <h2>Entretenimiento en las redes sociales</h2>
+      <h3>Contenido viral</h3>
+      <p>En un ecosistema actual, donde todo se mide a través de likes y comentarios, los oráculos
+digitales se convierten en contenidos perfectos para viralizarse. Un resultado inesperado o
+gracioso es motivo para subir una historia, hacer un TikTok o iniciar una conversación en grupo.
+Cada resultado genera interacción, comparación y comentarios entre los demás. Estas
+acciones refuerzan la idea de que los oráculos digitales no solo entretienen, sino que también
+construyen una comunidad en torno a la curiosidad.</p>
       <img src="assets/img/MI_IMAGEN.jpg" alt="Comunidades y rituales en línea" />
 
-      <h2>Implicaciones simbólicas y emocionales</h2>
-      <p>Pega aquí los significados, búsquedas personales y colectivas.</p>
+      <h2>El otro lado de los oráculos: riesgos</h2>
+      <h3>La delgada línea entre el juego y la creencia</h3>
+      <p>Aunque la mayoría de adolescentes encuentran a los oráculos como una forma de
+entretenimiento, algunos pueden otorgarles un peso mayor. La investigadora Angela McRobbie,
+experta en cultura juvenil, explica que los medios digitales muchas veces mezclan ocio y
+creencias, lo que puede generar interpretaciones confusas sobre identidad o destino (The
+Aftermath of Feminism, 2009).</p>
+
+<p>Al estar tan conectados a las redes sociales, estos juegos exponen a los jóvenes a dinámicas
+de comparación y validación constante entre ellos: “mi predicción es mejor que la tuya” o “mi
+energía salió negativa”. Aquí es donde la educación digital y el pensamiento crítico se vuelven
+fundamentales.
+</p>
 
       <!-- CIERRE -->
+      <h2>Una práctica cultural más que espiritual</h2>
+      <h3>De la espiritualidad al espectáculo</h3>
+      <p>Los oráculos que antes tenían un lugar sagrado en templos o rituales, hoy tienen un enfoque
+más humorístico. Como explica Marianna Ruah-Midbar en su estudio sobre prácticas
+contemporáneas de adivinación digital (Sacralization of Randomness, 2014), “lo que antes era
+espiritual se convierte ahora en un espectáculo cultural”, especialmente atractivo para
+generaciones jóvenes.</p>
+
+<p>Consultar un oráculo digital ya no es un acto místico ni limitado, es parte de nuestro día a día,
+se han convertido en hábitos de distracción, ya sea en medio de clases, durante un descanso o
+al final del día frente al celular
+</p>
       <h2>Conclusión</h2>
-      <p>Pega aquí el cierre completo del PDF.</p>
+      <p>Los oráculos digitales muestran cómo los jóvenes dan forma a su identidad en el mundo online.
+No representan verdades absolutas, sino experiencias que despiertan curiosidad y fomentan la
+interacción social. En este sentido, funcionan como un puente entre tradición y cultura juvenil
+digital, mostrando que lo místico puede reestructurarse para ser visto como memes, filtros y
+tendencias.</p>
+
+<p>Descubre la experiencia de los oráculos digitales en Lumen y comparte la magia con tu
+comunidad. Al final, la verdadera predicción no está en el futuro, sino en cómo los jóvenes
+crean, comparten y disfrutan el presente</p>
     `
   },
 
