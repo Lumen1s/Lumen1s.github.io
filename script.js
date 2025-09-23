@@ -174,7 +174,7 @@ entre el pasado y el presente, entre lo lúdico y lo espiritual.</p>
     titulo: "Oráculos digitales: la nueva magia del entretenimiento y la predicción",
     categoria: "Curiosidades",
     fecha: "2025-09-01",
-    contenido: `
+    contenido:`
       <!-- Basado en: Articulo 1 sofia, Oraculos digitales.pdf -->
 
       <!-- INTRO -->
@@ -338,65 +338,276 @@ crean, comparten y disfrutan el presente</p>
   },
 
   {
-    titulo: "Oráculos en Internet: historia y cultura — Gaby",
+    titulo: "Oráculos en Internet: historia y cultura",
     categoria: "Curiosidades",
     fecha: "2025-09-01",
     contenido: `
       <!-- Basado en: Oráculos en Internet_ historia y cultura Gaby.pdf -->
+      <p>De Delfos al Wi-Fi: La oscura y juguetona evolución de los oráculos en internet:</p>
+      
+<p>Desde la antigüedad, la humanidad ha buscado respuestas en voces ocultas; los
+oráculos eran los intermediarios divinos para preguntas que requieren respuestas
+sagradas. El primer registro vivido de estas experiencias espirituales nace en Grecia, 
+El Oráculo de Delfos, que fue uno de los oráculos más importantes en la época,
+sobreviviendo hasta el año 391. En este lugar, la sacerdotisa Pitia, en trance,
+pronunciaba las profecías de Apolo.</p>
 
-      <!-- INTRO -->
-      <h2>Introducción</h2>
-      <p>Pega aquí la introducción completa del PDF (línea histórica de oráculos en la red, enfoques culturales).</p>
+<p>xEstos oráculos inscribían preguntas y recibían respuestas enigmáticas, reforzando una
+atmósfera mística y simbólica. Ese patrón (consultar para saber el futuro o la voluntad
+divina) constituye la matriz cultural de todos los “oráculos”, y es el antecedente de las
+versiones contemporáneas digitales.</p>
 
       <!-- SECCIONES -->
-      <h2>De los oráculos clásicos a la web</h2>
-      <p>Pega aquí el puente histórico y cambios de medio / soporte.</p>
+      <h2>Primeros oráculos en la red y buscadores como guía</h2>
+      <p>Con la llegada de Internet surgieron las primeras herramientas de respuesta que,
+simbólicamente, actuaron como oráculos modernos. Por ejemplo, Ask Jeeves
+(Ask.com) nació en 1997 para contestar preguntas en lenguaje natural; era presentado
+como un mayordomo («Jeeves») dispuesto a responder tus dudas. De manera
+similar, buscadores como Google pasaron a ser vistos como “oráculos del
+conocimiento” de la red. Según Wired, Google fue tratado en su momento “como
+nuestro anterior oráculo del conocimiento de Internet”, capaz de brindar respuestas
+prácticamente instantáneas a cualquier consulta.</p>
+
+<p>Además, aparecieron comunidades de preguntas y respuestas colaborativas que
+evocaban la dinámica oracular. El Internet Oracle (Usenet Oracle), creado en 1989, es
+un ejemplo pionero: un foro global donde un usuario envía una pregunta que otro
+participante responde con humor, y así sucesivamente. Cada intercambio, llamado
+“oracularidad”, simula la figura del sacerdote que contesta el misterio; por ejemplo,
+alguien podía preguntar “¿Por qué es una vaca?” y el “Oráculo” respondía
+crípticamente “Mu”. Aunque irreverente, este sistema muestra cómo incluso en los
+albores de la web surgieron estructuras sociales (foros, e-mails) que imitaron la
+tradición oracular, ofreciendo respuestas disfrazadas de chiste o juego.
+</p>
       <img src="assets/img/MI_IMAGEN.jpg" alt="Evolución histórica de oráculos" />
 
-      <h2>Casos y plataformas destacadas</h2>
-      <p>Pega aquí los ejemplos que mencione el PDF (sitios, apps, fenómenos).</p>
+      <h2>El internet extraño y liminal de los años 2000: sitios perturbadores y oraculares</h2>
+      <p>En la transición al nuevo milenio floreció una estética extraña y liminal en la red. Se
+multiplicaron sitios web con diseños caóticos, mensajes inquietantes y funcionalidades
+aparentemente inútiles pero misteriosas. Un ejemplo célebre es Mortis.com (1997): al
+abrirlo mostraba sólo un recuadro de inicio de sesión sobre fondo negro. Nadie sabía la
+contraseña, y en su código fuente se descubrió que alojaba terabytes de datos
+inexplicables. El nombre (del latín mortis, “muerte”) y la gigantesca base de datos
+ocultaban rumores de archivos prohibidos y teorías conspirativas. Este misterio digital
+(no resuelto hasta hoy) creó sensación de “conjuro” en los usuarios. Según informes,
+Mortis.com “sigue siendo un enigma que no quiere ser resuelto”, ya que resistió
+intentos de intrusión y sus contenidos nunca se revelaron.</p>
 
-      <h2>Dimensión cultural y simbólica</h2>
-      <p>Pega aquí análisis cultural, recepción, usos, narrativas.</p>
+<p>Asimismo surgieron otros sitios con atmósferas esotéricas. Cthulhu.net, vinculado a
+Mortis.com por el mismo supuesto programador, plasmaba iconografía satánica y
+sonidos extraños: daba “una sensación igualmente inquietante”. Otras webs lúdicas y
+artísticas jugaron con lo bizarro: por ejemplo, Zombo.com (1999) prometía desde su
+página en blanco que “todo es posible” mediante una voz tranquilizadora, simulando un
+oráculo absurdo[9]. En la misma línea se desarrollaron animaciones y experimentos
+interactivos sin propósito práctico (animaciones sin sentido, banners infinitos, zonas de
+chat improvisado), que impregnaban al usuario de un sentimiento de irrealidad. Estos
+espacios (algunos diseñados con Flash o Java) convocaban al navegante a una
+experiencia casi ritual: entretenimientos psicodélicos que, si bien lúdicos, evocaban la
+tradición oracular de recibir revelaciones desde lo desconocido.</p>
+
+<p>Ejemplos reales: Entre los sitios recordados de esa época extraña se mencionan
+Mortis.com y Cthulhu.net, pero también páginas como ThisMan.org (un supuesto
+oráculo de sueños), colecciones de audios y animaciones puntuales (Cat Bounce,
+Electric Boogie-Woogie), o proyectos de net-art que imitaban rituales. Aunque muchos
+eran meras curiosidades, todos contribuían al aura misteriosa del viejo Internet, donde
+cada clic podía revelar algo inexplicado o fantástico (a veces, simplemente un
+fragmento de historia irrelevante convertido en leyenda urbana digital).
+.</p>
+
+      <h2>Bots conversacionales y la tradición de preguntar a las máquinas</h2>
+      <p>Los bots de conversación han funcionado como oráculos impersonales: interlocutores
+digitales que, al menos en apariencia, “responden” cualquier pregunta. El primer
+experimento destacado fue ELIZA (1966), un programa de Lawrence Weizenbaum que
+simulaba un psicoterapeuta reflexivo; aunque rudimentario, causó el efecto Pygmalion:
+muchos usuarios creyeron que conversaban con un humano real. En los años 90
+aparecieron chatbots más avanzados: A.L.I.C.E. (1995) de Richard Wallace imitaba
+mejor al habla humana y ganó el premio Loebner (competencia de Turing) tres
+veces. Un poco después, Jabberwacky (1997) de Rollo Carpenter buscó “simular un
+chat humano de forma interesante y entretenida”. A partir de él, en 2006 surgió
+Cleverbot, simplemente un motor web que aprende automáticamente de las
+conversaciones previas. Como afirma un reporte, “Cleverbot.com se lanzó en 2006,
+pero la IA nació en 1988 con Rollo Carpenter” y ha ido aprendiendo desde
+entonces. Así, cada generación de bot añadía más datos y naturalidad,
+construyendo un tipo de oráculo mecánico al que cualquiera puede preguntar de todo.</p>
+
+<p>Estos chatbots a menudo han sido empleados como oráculos lúdicos o reflexivos.
+Usuarios consultan a Cleverbot o ALICE temas místicos, existenciales o hasta
+adivinatorios, buscando respuestas que surgen de su gran base de conversaciones
+previas. Los bots modernos basados en IA (ChatGPT, Siri, Alexa) son herederos de esa
+idea: “Imagina una computadora que hable contigo… Existen desde los sesenta”,
+pero hoy pueden contextualizar mejor cada pregunta. La fascinación radica en que
+estas inteligencias artificiales asumen el rol de “guía” al estilo de los oráculos antiguos:
+quien pregunta delega la tarea de hallar una respuesta en una entidad ajena, sea divina
+o algorítmica[15][3]. En ese sentido, ChatGPT ha sido calificado como una de las
+“últimas materializaciones” del oráculo moderno, ya que, como explica un análisis,
+suplanta a “nuestros antiguos tutores” (libros, expertos, profesores) para entregar
+respuestas inmediatas y autoritativas.
+</p>
       <img src="assets/img/MI_IMAGEN.jpg" alt="Cultura digital y oráculos" />
 
       <!-- CIERRE -->
-      <h2>Conclusión</h2>
-      <p>Pega aquí el cierre completo del PDF.</p>
+      <h2>Juegos y herramientas de adivinación en línea</h2>
+      <p>Paralelamente surgieron juegos y apps adivinatorias que canalizan la estructura
+oracular en experiencias interactivas. Un ejemplo popular es Akinator (2007): un “genio”
+web que adivina en qué personaje real o ficticio estás pensando formulando preguntas
+binarias. Su algoritmo va aprendiendo de miles de usuarios, casi como un oráculo que
+extrae el conocimiento de una vasta colectividad. Según su ficha técnica, Akinator
+“intenta determinar qué personaje (objeto o animal) estás pensando, haciendo una
+serie de preguntas” basándose en clasificaciones estadísticas aprendidas[16]. El
+resultado es casi mágico: con alrededor de 20 preguntas suele acertar el personaje,
+como si leyera la mente del usuario.</p>
+
+<p>Otros sitios sacan provecho de la mística de la predicción: teletipos de horóscopos,
+lecturas de tarot online, bolas 8 mágicas web, apps de runas o cartas que prometen
+visiones del futuro. Aunque muchas veces funcionan con respuestas pre-programadas
+o aleatorias, el formato de “consulta-respuesta” recuerda el método oracular clásico.
+Incluso en redes sociales e IA moderna, es común ver prompts tipo “hazme de oráculo”
+o “interpreta estos sueños”, reflejando que internet se autoasume cada vez más como
+plataforma de revelación. Herramientas como Google Assistant o ChatGPT ahora
+pueden configurarse para que “lean el tarot” o den consejos amorosos, emulando a un
+adivino digital. De este modo, desde juegos livianos hasta bots espirituales, lo oracular
+se ha diversificado en la cultura digital.</p>
+
+<h2>Oráculos modernos en la cultura digital actual</h2>
+<p>Hoy en día vivimos en la era del big data y la inteligencia artificial, donde los “oráculos”
+se digitalizan por completo. El oráculo clásico (el oráculo de Delfos, el vidente, el sabio)
+ha sido reemplazado por sistemas de información masivos: buscadores avanzados,
+asistentes de voz y LLMs. Por ejemplo, ChatGPT y modelos similares son actualmente
+consultados “no sólo para aprender, sino también para pedir consejos amorosos o
+incluso predicciones”[15]. Se han convertido en “aliados” a la hora de resolver
+preguntas cotidianas o existenciales. A la par, Google sigue siendo referido como un
+oráculo implícito: tras la revolución de la IA, el anterior “oráculo difuso” era Google[3],
+ahora muchas búsquedas se hacen a través de asistentes inteligentes.</p>
+
+<p>Culturalmente, este fenómeno genera una especie de reverencia nueva: los usuarios
+muestran asombro (o tal vez incertidumbre) ante respuestas automáticas que imitan al
+pensamiento humano. Como escribió Kant hace siglos, el ser humano tiende a ceder
+“la guía del uso de su razón” a un tutor externo; hoy ese tutor puede ser digital. Así, en
+la cultura contemporánea del internet, las figuras de los videntes y profetas
+tradicionales conviven con algoritmos; ambos dan lugar a un tipo de ritual: formular una
+pregunta y recibir una respuesta como revelación final. Al mismo tiempo, muchos
+artistas y creadores se han apropiado de esta idea en proyectos de net-art o
+instalaciones interactivas, resaltando lo enigmático. En resumen, los oráculos digitales
+–de los foros humorísticos de los 90 a los sofisticados bots de IA de hoy– siguen
+cumpliendo un rol simbólico: el de encarnar el misterio de lo desconocido en la
+vastedad de la cultura online.</p>
+
     `
   },
 
   {
-    titulo: "Resurgimiento cultural de la ‘bruja’ en el siglo XXI — Gaby",
+    titulo: "Resurgimiento cultural de la ‘bruja’ en el siglo XXI",
     categoria: "Curiosidades",
     fecha: "2025-09-01",
     contenido: `
       <!-- Basado en: Resurgimiento cultural de la “bruja” en el siglo XXI Gaby.pdf -->
 
       <!-- INTRO -->
-      <h2>Introducción</h2>
-      <p>Pega aquí la introducción completa del PDF (contexto de la figura de la bruja hoy).</p>
+      <p>En las últimas dos décadas la figura de la bruja dejó de ser solo una estampa de
+cuentos medievales para convertirse en un ícono cultural multifacético. Estudios
+recientes constatan que “la Bruja está de actualidad en todos los ámbitos sociales y
+culturales”. Históricamente, las acusaciones de brujería solían dirigirse contra
+mujeres poseedoras de saberes prácticos (herbología, medicina popular, conocimiento
+intuitivo), vistos como peligrosos por el orden patriarcal. Como propone Blázquez‐Graf,
+las acusadas de brujería fueron “modelo de mujer con conocimientos específicos” cuyo
+saber fue perseguido. Recuperar hoy la bruja implica, pues, reivindicar ese
+conocimiento marginado y cuestionar las estructuras que lo silenciaron.</p>
       <img src="assets/img/MI_IMAGEN.jpg" alt="Iconografía de la bruja" />
 
       <!-- SECCIONES -->
-      <h2>De estigma a símbolo</h2>
-      <p>Pega aquí el cambio de percepción histórica y social.</p>
+      <h2>Brujería, feminismo y movimientos identitarios</h2>
+      <p>A partir de los años 2000 la bruja se rehizo como emblema de empoderamiento
+femenino. Autoras actuales enfatizan que “la hechicería es feminismo, es
+inherentemente política”. La activista Gabriela Herstik destaca que la bruja es
+“inherentemente feminista”, simbolizando a la mujer rebelde que desafía la moral
+dominante. Colectivos y figuras vinculadas al feminismo recuperan el motivo de la bruja
+para canalizar su mensaje. Por ejemplo, grupos como W.I.T.C.H. (Women’s
+International Terrorist Conspiracy from Hell) reclamaban que sus “hermanas brujas”
+eran “guerrilleras y luchadoras de la resistencia”. Asimismo, diseñadoras y artistas
+integran iconografía brujeril en su discurso feminista. Vogue documenta que el
+diseñador Víctor Barragán usó la magia sexual de las brujas “para combatir la
+dominación patriarcal”. En resumen, la bruja contemporánea conjuga rebelión
+identitaria y empoderamiento de género.</p>
 
-      <h2>Representaciones en medios y redes</h2>
-      <p>Pega aquí ejemplos de moda, arte, cine, #WitchTok, etc.</p>
+      <h2>Espiritualidad alternativa vs. religiones institucionales</h2>
+      <p>El resurgimiento de la brujería está ligado al auge de formas de espiritualidad no
+institucional. Según Lionel Obadia (2023), el cambio religioso global presenta un
+“retorno de la magia” paralelo al crecimiento de la “espiritualidad”, y ambos fenómenos
+se entrelazan: la brujería moderna se vuelve más “espiritual” y la espiritualidad más
+“brujeril”. Este fenómeno se ha dado en sociedades secularizadas donde muchas
+personas buscan experiencias místicas fuera de las iglesias tradicionales. Movimientos
+como la Wicca o las feministas de la Diosa (goddess movement) promueven rituales de
+la naturaleza y devociones a lo femenino sagrado, conectando la brujería con la
+búsqueda de lo espiritual en clave personal e igualitaria. En este nuevo marco, la magia
+recupera significados de sanación, conexión con la tierra y autonomía, reaccionando
+ante el vacío que dejan las religiones convencionales.</p>
       <img src="assets/img/MI_IMAGEN.jpg" alt="Representaciones contemporáneas" />
 
-      <h2>Dimensión identitaria y espiritual</h2>
-      <p>Pega aquí la lectura de autonomía, rebeldía, espiritualidad.</p>
+      <h2>Comunidades esotéricas en la era digital</h2>
+      <p>La revolución de Internet fue decisiva para esta ola bruja. Lo que antes se practicaba
+en privado se exhibe ahora con orgullo en redes sociales. Plataformas clave facilitan la
+creación de comunidades globales de brujas y curiosos esotéricos:</p>
+ <ul>
+        <li><strong>TikTok (#WitchTok):</strong> La etiqueta #WitchTok acumula decenas de miles de
+millones de vistas. Creadoras como la española Nerea Luna
+(@AuraDeCristal87) suman decenas de miles de seguidores mostrando rituales,
+lecturas de tarot y reflexiones esotéricas. Forbes (2022) señala que tras la
+pandemia este espacio se convirtió en refugio: “un trauma colectivo [que] hizo a
+mucha gente mirar hacia dentro y buscar respuestas”. No todo es fiable,
+advierten expertos, pero la mera presencia masiva de contenido esotérico en
+TikTok es un signo del auge.</li>
+        <li><strong>Tumblr y hashtags:</strong> En Tumblr surgió la comunidad #witchblr, donde usuarias
+compartían fotos, consejos mágicos y una estética “witchy” (mística/gótica).
+Estudios etnográficos muestran que etiquetas como #witchblr o #witchesofcolor
+operan “como contramundos donde pueden articularse narrativas de resistencia
+y trabajo personal de identidad”, especialmente entre mujeres jóvenes
+marginadas. Esto evidencia que lo digital sirve de “espacio de contranarrativa”
+donde se reivindica la bruja opuesta a estereotipos.</li>
+        <li><strong>Otros espacios en línea:</strong> Desde foros especializados (e.g. Reddit r/witchcraft)
+hasta blogs, podcasts y grupos en Facebook se han tejido redes de practicantes
+modernos. Incluso existen programas comunitarios como la radio feminista Las
+Brujas que Salem (en Argentina) o podcasts en español dedicados al
+esoterismo. Así, la brujería de nueva ola ha formado comunidades
+transnacionales que comparten recursos, cursos y comunidad.</li>
+</ul>
+<p>La iconografía brujeril también se proyecta en la moda y el arte. Colecciones de alta
+costura han jugado con el arquetipo de la bruja para transmitir mensajes transgresores:
+por ejemplo, Rei Kawakubo (Comme des Garçons) presentó en 2016 modelos con
+voluminosos tocados y capas negras que recuerdan al sombrero de brujo clásico. Este
+tipo de creaciones confirma que “en el diseño de moda se tiende a recuperar a la Bruja
+para transmitir mensajes político-feministas”. La imagen de la bruja (sombreros
+puntiagudos, estrellas, pentagramas bordados) aparece en desfiles de Saint Laurent,
+Alexander McQueen o Gareth Pugh, acompañada de eslóganes como “Patriarchy =
+CO₂” o referencias a cultos paganos.</p>
+
+<p>Más allá de las pasarelas, la bruja percola el cine, la TV y la música. Desde el año 2000
+se han estrenado más de sesenta películas y series con personajes brujescos (por
+ejemplo The Witch, American Horror Story o el remake de La maldición de las brujas),
+reflejando una explosión mediática. En la música pop son comunes las referencias
+ocultistas: clásicos como “Black Magic Woman” (Santana, 1970) o “Witchy Woman”
+(The Eagles, 1972) celebran la bruja como figura seductora[14]. Incluso artistas
+españolas han abrazado el símbolo: la cantante La Bien Querida tituló un disco
+Aquelarre, y letras de reguetón o trap incorporan emojis de pentagramas y lunas como
+códigos estéticos. En el marketing masivo esta iconografía alcanza productos desde
+velas y joyería hasta libros de autoayuda espiritual; se habla ya de una moda “witchy”
+en decorados y diseño gráfico, reflejo del fenómeno cultural.</p>
 
       <!-- CIERRE -->
-      <h2>Conclusión</h2>
-      <p>Pega aquí el cierre completo del PDF.</p>
+      <h2>Identidad, sabiduría y disidencia: la nueva bruja</h2>
+      <p>En resumen, Internet y la cultura pop han reconfigurado a la bruja como símbolo de
+autodeterminación. Como sintetiza Forbes, “en la era digital, una bruja puede ser
+cualquiera”: personas comunes cuyo día a día incluye la magia como “uno de sus
+pilares fundamentales”. Lejos de la estampa negativa de la anciana con escoba,
+hoy la bruja representa el conocimiento intuitivo, la conexión con lo natural y la rebeldía
+contra lo establecido. Aparece como arquetipo de mujer sabia, espiritual e
+independiente, que desafía normas de género y de pensamiento. En este sentido, el
+revival de la brujería es al mismo tiempo estético y político: rememora viejas
+persecuciones para denunciar nuevas opresiones, revaloriza culturas alternativas y teje
+comunidades globales de disidencia cultural.</p>
     `
   },
 
   {
-    titulo: "Artículos de Mateo",
+    titulo: "Tarot 101: Descubre lo que los Arcanos Mayores Dicen de Ti",
     categoria: "Curiosidades",
     fecha: "2025-09-01",
     contenido: `
@@ -404,25 +615,102 @@ crean, comparten y disfrutan el presente</p>
       <!-- Si este PDF contiene varios artículos, puedes dividirlo en sub-secciones con h2/h3 -->
 
       <!-- INTRO -->
-      <h2>Introducción</h2>
-      <p>Pega aquí la introducción global o el contexto del conjunto de artículos.</p>
+      <p>PEl tarot ya no es cosa de brujas en películas ni de adivinadoras en carpas misteriosas. Hoy en día es una herramienta de autoconocimiento que cualquiera puede usar para reflexionar sobre su vida, tomar decisiones y conectar con su intuición. Si alguna vez te ha intrigado ver esas cartas llenas de símbolos y figuras, este artículo es para ti.</p>
 
       <!-- ARTÍCULO 1 -->
-      <h2>Título del primer artículo</h2>
-      <p>Pega aquí el contenido completo del primer artículo.</p>
+      <h2>Qué es el tarot (en serio)</h2>
+      <p>El tarot es un mazo de 78 cartas que se divide en dos grandes grupos:</p>
+    <p> ● Arcanos Mayores (22 cartas): Representan grandes lecciones y arquetipos universales (como El Loco, La Muerte o El Sol). </p>
+   <p> ● Arcanos Menores (56 cartas): Hablan de situaciones cotidianas y emociones más
+concretas. </p>
+<p>Hoy nos vamos a enfocar en los Arcanos Mayores, porque son los que tienen más “drama”
+y profundidad.</p>
+
+<h2>Los Arcanos Mayores y su significado</h2>
+<p>Aquí tienes algunos de los más conocidos y lo que suelen simbolizar:</p>
+<p>● El Loco (0): Nuevos comienzos, tomar riesgos, lanzarse sin miedo.</p>
+<p>● La Sacerdotisa (II): Intuición, secretos, sabiduría interior.</p>
+<p>● El Emperador (IV): Orden, estructura, liderazgo.</p>
+<p>● Los Enamorados (VI): Elecciones importantes, relaciones, unión.</p>
+<p>● La Muerte (XIII): Transformación, cierre de ciclos, renacimiento.</p>
+<p>● El Sol (XIX): Éxito, alegría, claridad.</p>
+<h3>Tip: Que salga “La Muerte” en tu tirada no significa que alguien vaya a morir.
+Normalmente indica que algo en tu vida está por transformarse.</h3>
+
       <img src="assets/img/MI_IMAGEN.jpg" alt="Imagen del primer artículo" />
 
-      <!-- ARTÍCULO 2 -->
-      <h2>Título del segundo artículo</h2>
-      <p>Pega aquí el contenido completo del segundo artículo.</p>
-      <img src="assets/img/MI_IMAGEN.jpg" alt="Imagen del segundo artículo" />
+<h2>Cómo hacer una tirada simple</h2>
+<p>No necesitas ser tarotista profesional para empezar:</p>
+<p> 1. Conecta con tu intención – Respira profundo y piensa en la pregunta que quieres
+responder.</p>
+<p> 2. Baraja las cartas – Concéntrate en tu pregunta mientras las mezclas.</p>
+<p> 3. Saca tres cartas:</p>
+ <p>○ Carta 1 → El pasado o la raíz de la situación</p>
+ <p>○ Carta 2 → El presente o lo que debes considerar</p>
+ <p>○ Carta 3 → El futuro o el resultado probable</p>
 
-      <!-- Agrega más bloques si hay más artículos dentro del PDF -->
+ <h2>Tarot = espejo, no sentencia</h2>
+ <p>El tarot no te dice lo que va a pasar, sino que te muestra posibilidades y patrones. Es como
+un mapa que te ayuda a ver el terreno… pero el camino lo eliges tú.</p>
 
-      <!-- CIERRE -->
-      <h2>Conclusión</h2>
-      <p>Pega aquí el cierre o reflexión final.</p>
+<p>Explorar el tarot es una forma divertida y profunda de conocerte mejor. Si lo pruebas, no te
+lo tomes como algo rígido: úsalo para inspirarte, aclarar ideas y descubrir nuevas
+perspectivas.</p>
+<p>¿Te atreves a sacar una carta hoy y ver qué mensaje tiene para ti? </p>
     `
+     
+  },
+   
+   {
+    titulo: "Manifestación: El Arte de Crear la Vida que Sueñas",
+    categoria: "Curiosidades",
+    fecha: "2025-09-01",
+    contenido: `
+      <!-- Basado en: Articulos mateo.pdf -->
+      <!-- Si este PDF contiene varios artículos, puedes dividirlo en sub-secciones con h2/h3 -->
+
+      <!-- INTRO -->
+<p>¿Alguna vez has escuchado la frase “lo que piensas, atraes”? 🤔 Pues eso es básicamente
+la manifestación: el proceso de enfocar tus pensamientos, emociones y acciones para
+traer a tu vida aquello que más deseas. No es magia, es intención… ¡y funciona mejor de lo
+que crees!</p>
+
+      <!-- ARTÍCULO 1 -->
+      <h2>¿Qué es la manifestación?</h2>
+      <p>La manifestación es la práctica de alinear tu mente y tus acciones con lo que quieres
+lograr. Se trata de visualizar tu meta, creer que es posible y dar pasos hacia ella. Piensa en
+ello como programar tu GPS mental hacia el destino de tus sueños.</p>
+
+<h2>La ciencia detrás (sí, hay ciencia)</h2>
+<p>Aunque suene místico, la psicología apoya parte de esta idea:</p>
+    <p> ● Cuando defines un objetivo claro, tu cerebro filtra la información para enfocarse
+en oportunidades relacionadas (efecto conocido como sistema de activación
+reticular). </p>
+   <p> ● Mantener una actitud positiva aumenta la motivación y la resiliencia, dos
+ingredientes clave para alcanzar metas. </p>
+
+<h2>Cómo empezar a manifestar</h2>
+<p>Aquí van pasos simples para comenzar hoy mismo:</p>
+<p>● Define tu deseo con claridad: No digas “quiero ser feliz”, di “quiero un trabajo que me permita viajar y tenga un
+buen ambiente de equipo”.</p>
+<p>● Visualiza: Dedica 5 minutos al día a imaginar que ya lo lograste: ¿cómo te sientes?, ¿qué
+ves?, ¿con quién estás?</p>
+<p>● Cree de verdad: La duda frena el proceso. Afirma: “esto es posible para mí”</p>
+<p>● Toma acción: El universo se mueve contigo. Envía ese correo, toma ese curso, habla con esa
+persona.</p>
+<p>● Agradece antes de tiempo: Actúa como si ya fuera tuyo y agradece por ello. La gratitud cambia tu energía.</p>
+
+<h2>Lo que NO es manifestar</h2>
+<p>No se trata de quedarse sentado esperando que caiga del cielo. Manifestar es soñar +
+actuar.</p>
+
+      <img src="assets/img/MI_IMAGEN.jpg" alt="Imagen del primer artículo" />
+
+<p>La manifestación es una herramienta poderosa para enfocarte en lo que realmente quieres
+y crear la vida que imaginas. Así que hoy, detente un momento, escribe tu meta más grande
+y empieza a dar pequeños pasos. ¡Tu yo del futuro te lo va a agradecer.</p>
+    `
+     
   }
 ];
 
