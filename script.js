@@ -128,7 +128,7 @@ const posts = [
       <h2>¿Qué es?</h2>
       <p>El tarot, reconocido hoy como una poderosa herramienta de adivinación y autoconocimiento, tiene sus raíces en la Europa del siglo XV. Su origen más documentado se encuentra en Italia, donde surgió como un mazo de cartas utilizado en un juego llamado tarocchi. En aquella época no estaba asociado con lo místico, sino que servía principalmente como entretenimiento para las cortes nobles, acompañado de elaboradas ilustraciones que decoraban las cartas.</p>
       <p>Las imágenes de los Arcanos Mayores rápidamente llamaron la atención. Estas cartas mostraban figuras cargadas de simbolismo —como El Mago, La Emperatriz o La Muerte— que representaban arquetipos humanos y fuerzas universales. Aunque al principio eran solo parte del diseño artístico, con el tiempo comenzaron a ser interpretadas como expresiones filosóficas y espirituales.</p>
-      <img src="assets/img/MI_IMAGEN.jpg" alt="Portada del artículo de Tarot" />
+      <img src="assets/img/Lumen3.jpeg" alt="Portada del artículo de Tarot" />
 
       <!-- SECCIONES PRINCIPALES -->
       <h2>Historia y contexto</h2>
