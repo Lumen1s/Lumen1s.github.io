@@ -191,7 +191,7 @@ sencilla de explorar tu curiosidad y pasar un buen rato.</p>
 
 <p>Ya no vemos la magia en lo sobrenatural, sino en lo que se puede compartir, en lo que nos
 divierte y en lo que acompaña nuestra vida diaria.</p>
-      <img src="assets/img/MI_IMAGEN.jpg" alt="Ilustración oráculos digitales" />
+      <img src="assets/img/Lumen1.jpeg" alt="Ilustración oráculos digitales" />
 
       <!-- SECCIONES -->
       <h2>¿Qué es un oráculo digital?</h2>
@@ -209,7 +209,7 @@ segundos, puedes pasar al olvido con un swipe. En este contexto, los oráculos d
 una herramienta diferente porque rompen la rutina diaria, generan momentos de risa y
 reflexión, y nos hacen sentir parte de algo colectivo al compartir resultados con amigos o en
 redes sociales.</p>
-      <img src="assets/img/MI_IMAGEN.jpg" alt="Uso de apps y filtros oraculares" />
+      <img src="assets/img/Lumen6.jpg" alt="Uso de apps y filtros oraculares" />
 
       <h3>Entre curiosidad y diversión</h3>
       <p>Los oráculos son como juegos interactivos que capturan la atención en pocos clics. Sus
@@ -295,7 +295,7 @@ gracioso es motivo para subir una historia, hacer un TikTok o iniciar una conver
 Cada resultado genera interacción, comparación y comentarios entre los demás. Estas
 acciones refuerzan la idea de que los oráculos digitales no solo entretienen, sino que también
 construyen una comunidad en torno a la curiosidad.</p>
-      <img src="assets/img/MI_IMAGEN.jpg" alt="Comunidades y rituales en línea" />
+      <img src="assets/img/Lumen5.jpeg" alt="Comunidades y rituales en línea" />
 
       <h2>El otro lado de los oráculos: riesgos</h2>
       <h3>La delgada línea entre el juego y la creencia</h3>
@@ -378,7 +378,7 @@ crípticamente “Mu”. Aunque irreverente, este sistema muestra cómo incluso 
 albores de la web surgieron estructuras sociales (foros, e-mails) que imitaron la
 tradición oracular, ofreciendo respuestas disfrazadas de chiste o juego.
 </p>
-      <img src="assets/img/MI_IMAGEN.jpg" alt="Evolución histórica de oráculos" />
+      <img src="assets/img/Lumen11.jpg" alt="Evolución histórica de oráculos" />
 
       <h2>El internet extraño y liminal de los años 2000: sitios perturbadores y oraculares</h2>
       <p>En la transición al nuevo milenio floreció una estética extraña y liminal en la red. Se
@@ -442,7 +442,7 @@ o algorítmica[15][3]. En ese sentido, ChatGPT ha sido calificado como una de la
 suplanta a “nuestros antiguos tutores” (libros, expertos, profesores) para entregar
 respuestas inmediatas y autoritativas.
 </p>
-      <img src="assets/img/MI_IMAGEN.jpg" alt="Cultura digital y oráculos" />
+      <img src="assets/img/Lumen12.jpg" alt="Cultura digital y oráculos" />
 
       <!-- CIERRE -->
       <h2>Juegos y herramientas de adivinación en línea</h2>
@@ -511,7 +511,7 @@ intuitivo), vistos como peligrosos por el orden patriarcal. Como propone Blázqu
 las acusadas de brujería fueron “modelo de mujer con conocimientos específicos” cuyo
 saber fue perseguido. Recuperar hoy la bruja implica, pues, reivindicar ese
 conocimiento marginado y cuestionar las estructuras que lo silenciaron.</p>
-      <img src="assets/img/MI_IMAGEN.jpg" alt="Iconografía de la bruja" />
+      <img src="assets/img/Lumen7.jpg" alt="Iconografía de la bruja" />
 
       <!-- SECCIONES -->
       <h2>Brujería, feminismo y movimientos identitarios</h2>
@@ -540,7 +540,7 @@ la naturaleza y devociones a lo femenino sagrado, conectando la brujería con la
 búsqueda de lo espiritual en clave personal e igualitaria. En este nuevo marco, la magia
 recupera significados de sanación, conexión con la tierra y autonomía, reaccionando
 ante el vacío que dejan las religiones convencionales.</p>
-      <img src="assets/img/MI_IMAGEN.jpg" alt="Representaciones contemporáneas" />
+      <img src="assets/img/Lumen8.jpg" alt="Representaciones contemporáneas" />
 
       <h2>Comunidades esotéricas en la era digital</h2>
       <p>La revolución de Internet fue decisiva para esta ola bruja. Lo que antes se practicaba
@@ -637,7 +637,7 @@ y profundidad.</p>
 <h3>Tip: Que salga “La Muerte” en tu tirada no significa que alguien vaya a morir.
 Normalmente indica que algo en tu vida está por transformarse.</h3>
 
-      <img src="assets/img/MI_IMAGEN.jpg" alt="Imagen del primer artículo" />
+      <img src="assets/img/Lumen9.jpg" alt="Imagen del primer artículo" />
 
 <h2>Cómo hacer una tirada simple</h2>
 <p>No necesitas ser tarotista profesional para empezar:</p>
@@ -704,7 +704,7 @@ persona.</p>
 <p>No se trata de quedarse sentado esperando que caiga del cielo. Manifestar es soñar +
 actuar.</p>
 
-      <img src="assets/img/MI_IMAGEN.jpg" alt="Imagen del primer artículo" />
+      <img src="assets/img/Lumen10.jpg" alt="Imagen del primer artículo" />
 
 <p>La manifestación es una herramienta poderosa para enfocarte en lo que realmente quieres
 y crear la vida que imaginas. Así que hoy, detente un momento, escribe tu meta más grande
