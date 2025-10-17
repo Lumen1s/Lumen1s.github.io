@@ -795,3 +795,20 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
   });
 });
+/* =========================
+   ENTRADA — Botón "Iniciar"
+   ========================= */
+function enterLumen() {
+  const intro = document.getElementById("intro");
+  const home = document.getElementById("home");
+
+  intro.classList.add("hidden");
+
+  // Espera 1.5 segundos (transición) y muestra el home
+  setTimeout(() => {
+    intro.style.display = "none";
+    home.classList.remove("hidden");
+    home.classList.add("active");
+  }, 1500);
+}
+
