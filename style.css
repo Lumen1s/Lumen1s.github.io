@@ -281,3 +281,108 @@ h1, h2, h3 { font-weight: 900; letter-spacing: .06em; }
 .post{ background:rgba(72,42,65,.35); border:1px solid rgba(206,178,189,.35); border-radius:16px; padding:1rem; cursor:pointer; box-shadow:0 10px 24px rgba(72,42,65,.30); }
 .post:hover{ transform:translateY(-2px); box-shadow:0 12px 28px rgba(87,46,84,.35); }
 
+/* =========================
+   PANTALLA DE ENTRADA
+   ========================= */
+
+#intro {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 1.5s ease;
+}
+
+#intro.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s ease;
+}
+
+/* Estrellas en movimiento */
+.stars, .stars2, .stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  background-size: contain;
+  z-index: 0;
+}
+
+.stars {
+  background-image: radial-gradient(2px 2px at 20px 20px, #ffffff, transparent),
+                    radial-gradient(1px 1px at 80px 60px, #fff, transparent),
+                    radial-gradient(2px 2px at 150px 120px, #fff, transparent);
+  animation: moveStars 100s linear infinite;
+}
+
+.stars2 {
+  background-image: radial-gradient(2px 2px at 10px 10px, #d7c8ff, transparent),
+                    radial-gradient(1px 1px at 200px 80px, #fff, transparent),
+                    radial-gradient(2px 2px at 300px 200px, #d7c8ff, transparent);
+  animation: moveStars 180s linear infinite;
+  opacity: 0.6;
+}
+
+.stars3 {
+  background-image: radial-gradient(2px 2px at 150px 150px, #fff, transparent),
+                    radial-gradient(1px 1px at 100px 300px, #fff, transparent),
+                    radial-gradient(2px 2px at 250px 400px, #fff, transparent);
+  animation: moveStars 240s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0, 0 0, 0 0; }
+  to { background-position: 10000px 5000px, -5000px 10000px, 10000px -5000px; }
+}
+
+/* Texto y botón */
+.intro-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #E2D2C8;
+}
+
+.intro-title {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  color: #E2D2C8;
+  text-shadow: 0 0 20px #8E7692, 0 0 40px #482A41;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 15px #8E7692, 0 0 25px #482A41; }
+  to   { text-shadow: 0 0 30px #CEB2BD, 0 0 60px #E2D2C8; }
+}
+
+.intro-btn {
+  margin-top: 30px;
+  background: linear-gradient(90deg, #8E7692, #482A41);
+  color: #E2D2C8;
+  font-size: 1.2rem;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.intro-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #E2D2C8;
+}
+
+
