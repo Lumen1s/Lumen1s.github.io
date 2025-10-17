@@ -14,11 +14,11 @@ html, body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
   color: var(--dust-storm);
-  background: transparent; /* se maneja desde #cosmos */
+  background: linear-gradient(120deg, var(--dark-puce), var(--japanese-violet));
   min-height: 100%;
   text-align: center;
-  overflow-x: hidden;
 }
+
 
 h1, h2, h3 { font-weight: 900; letter-spacing: .06em; }
 .logo { font-size: 3rem; margin: 20px; color: var(--pale-silver); }
@@ -385,69 +385,3 @@ h1, h2, h3 { font-weight: 900; letter-spacing: .06em; }
   transform: scale(1.05);
   box-shadow: 0 0 20px #E2D2C8;
 }
-/* =========================
-   FONDO ESTRELLADO GLOBAL — LUMEN
-   ========================= */
-
-#cosmos {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(ellipse at bottom,
-              color-mix(in srgb, var(--mountbatten-pink) 40%, var(--japanese-violet)) 0%,
-              var(--dark-puce) 100%);
-  overflow: hidden;
-  z-index: -1; /* detrás de todo */
-}
-
-/* Capas de estrellas — movimiento */
-.stars, .stars2, .stars3 {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-repeat: repeat;
-  background-size: contain;
-  opacity: 0.9;
-}
-
-.stars {
-  background-image:
-    radial-gradient(2px 2px at 20px 20px, var(--dust-storm), transparent),
-    radial-gradient(1px 1px at 80px 60px, var(--pale-silver), transparent),
-    radial-gradient(2px 2px at 150px 120px, var(--dust-storm), transparent);
-  animation: moveStars 120s linear infinite;
-}
-
-.stars2 {
-  background-image:
-    radial-gradient(2px 2px at 10px 10px, var(--pale-silver), transparent),
-    radial-gradient(1px 1px at 200px 80px, var(--dust-storm), transparent),
-    radial-gradient(2px 2px at 300px 200px, var(--pale-silver), transparent);
-  animation: moveStars 200s linear infinite;
-  opacity: 0.6;
-}
-
-.stars3 {
-  background-image:
-    radial-gradient(2px 2px at 150px 150px, var(--dust-storm), transparent),
-    radial-gradient(1px 1px at 100px 300px, var(--pale-silver), transparent),
-    radial-gradient(2px 2px at 250px 400px, var(--dust-storm), transparent);
-  animation: moveStars 300s linear infinite;
-  opacity: 0.4;
-}
-
-@keyframes moveStars {
-  from { background-position: 0 0, 0 0, 0 0; }
-  to { background-position: 10000px 5000px, -5000px 10000px, 10000px -5000px; }
-}
-
-/* Ajuste visual: leve velo violeta sobre todo el sitio */
-#cosmos::after {
-  content: "";
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg,
-              rgba(72,42,65,0.10),
-              rgba(87,46,84,0.25));
-  z-index: 0;
-  pointer-events: none;
-}
-
