@@ -385,3 +385,13 @@ h1, h2, h3 { font-weight: 900; letter-spacing: .06em; }
   transform: scale(1.05);
   box-shadow: 0 0 20px #E2D2C8;
 }
+/* ====== Nosotros: items clicables ====== */
+.about-item {
+  cursor: pointer;
+  transition: transform .12s ease, background .2s ease, box-shadow .2s ease;
+}
+.about-item:hover {
+  transform: translateY(-1px);
+  background: rgba(206,178,189,0.22);
+  box-shadow: 0 8px 18px rgba(72,42,65,.25);
+}
