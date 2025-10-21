@@ -896,5 +896,46 @@ document.addEventListener('DOMContentLoaded', () => {
   enableOutsideClickToClose('postModal');   // modal del Blog
   enableOutsideClickToClose('oracleModal'); // modal del Oráculo
 });
+/* ====== Helper: cerrar modales al hacer clic fuera ====== */
+function enableOutsideClickToClose(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return;
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closePost(modalId);
+  });
+  const content = modal.querySelector('.modal-content');
+  if (content) content.addEventListener('click', (e) => e.stopPropagation());
+}
+
+/* ====== Abrir modal de "Nosotros" ====== */
+function openAbout(key) {
+  const item = aboutItems[key];
+  if (!item) return;
+  const titleEl = document.getElementById("aboutModalTitle");
+  const bodyEl  = document.getElementById("aboutModalBody");
+  const metaEl  = document.getElementById("aboutModalMeta");
+
+  if (titleEl) titleEl.textContent = item.titulo || "Nosotros";
+  if (metaEl)  metaEl.textContent  = "";
+  if (bodyEl)  bodyEl.innerHTML    = item.contenido || "";
+
+  const modal = document.getElementById("aboutModal");
+  if (modal) {
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  }
+}
+
+/* ====== Vincular eventos de clic para "Nosotros" ====== */
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".about-item[data-key]").forEach(li => {
+    li.addEventListener("click", () => {
+      const key = li.getAttribute("data-key");
+      openAbout(key);
+    });
+  });
+
+  enableOutsideClickToClose('aboutModal');
+});
 
 
