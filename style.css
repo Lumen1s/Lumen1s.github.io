@@ -395,3 +395,95 @@ h1, h2, h3 { font-weight: 900; letter-spacing: .06em; }
   background: rgba(206,178,189,0.22);
   box-shadow: 0 8px 18px rgba(72,42,65,.25);
 }
+/* ===== Nosotros — layout de dos columnas ===== */
+#nosotros{
+  max-width: 1100px; margin: 1.5rem auto 3rem; padding: 0 1rem; text-align: left;
+}
+.about-flex{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr; /* texto + media/redes */
+  gap: 1rem;
+  align-items: start;
+  margin-top: .6rem;
+}
+
+/* Caja de texto (ya la tenías; reafirmo estilos) */
+.about-text p{
+  margin: 0 0 .8rem 0;
+  line-height: 1.7;
+  color: var(--dust-storm);
+  background: rgba(72,42,65,0.35);
+  border: 1px solid rgba(206,178,189,0.35);
+  padding: 1rem;
+  border-radius: 12px;
+}
+.about-list{
+  list-style: none; padding-left: 0; margin: 0;
+}
+.about-list li{
+  background: rgba(72,42,65,0.35);
+  border: 1px solid rgba(206,178,189,0.35);
+  margin: .4rem 0; padding: .6rem .8rem; border-radius: 10px;
+  transition: transform .12s ease, background .2s ease, box-shadow .2s ease;
+  cursor: pointer;
+}
+.about-list li:hover{
+  transform: translateY(-1px);
+  background: rgba(206,178,189,0.22);
+  box-shadow: 0 8px 18px rgba(72,42,65,.25);
+}
+
+/* Columna derecha: foto + redes */
+.about-media { display: grid; gap: .9rem; }
+
+.about-photo{
+  margin: 0;
+  background: rgba(72,42,65,0.35);
+  border: 1px solid rgba(206,178,189,0.35);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(72,42,65,.30);
+}
+.about-photo img{
+  width: 100%; height: auto; display: block;
+}
+.about-photo figcaption{
+  font-size: .9rem; color: var(--pale-silver);
+  padding: .5rem .75rem;
+}
+
+/* Redes */
+.about-social{
+  background: rgba(72,42,65,0.35);
+  border: 1px solid rgba(206,178,189,0.35);
+  border-radius: 12px;
+  padding: .9rem;
+  box-shadow: 0 10px 24px rgba(72,42,65,.30);
+}
+.social-title{
+  margin: 0 0 .5rem 0;
+  color: var(--dust-storm);
+  font-weight: 900;
+  letter-spacing: .03em;
+}
+.social-link{
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(206,178,189,0.35);
+  transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+}
+.social-link img{
+  width: 100%; height: auto; display: block;
+}
+.social-link:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(87,46,84,.35);
+  filter: brightness(1.03);
+}
+
+/* Responsive: stack en móviles */
+@media (max-width: 900px){
+  .about-flex{ grid-template-columns: 1fr; }
+}
