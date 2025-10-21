@@ -811,4 +811,31 @@ function enterLumen() {
     home.classList.add("active");
   }, 1500);
 }
+/* =========================
+   Cerrar modales al hacer clic fuera
+   ========================= */
+function enableOutsideClickToClose(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return;
+
+  // Si haces clic en el fondo (overlay), cierra
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closePost(modalId);
+    }
+  });
+
+  // Si haces clic dentro de la caja del artículo, NO cierres
+  const content = modal.querySelector('.modal-content');
+  if (content) {
+    content.addEventListener('click', (e) => e.stopPropagation());
+  }
+}
+
+// Activa para ambos modales (blog y oráculo)
+document.addEventListener('DOMContentLoaded', () => {
+  enableOutsideClickToClose('postModal');   // modal del Blog
+  enableOutsideClickToClose('oracleModal'); // modal del Oráculo
+});
+
 
