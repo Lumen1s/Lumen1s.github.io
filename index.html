@@ -116,12 +116,24 @@
           accesibles, y encuentras lecturas que invitan a la reflexión. Nuestro propósito es
           acompañar tu búsqueda interior con belleza, claridad y sentido.
         </p>
-        <ul class="about-list">
-          <li>Conexión y propósito</li>
-          <li>Explorar la curiosidad</li>
-          <li>Contenido místico y espiritual</li>
-          <li>Vive una nueva experiencia</li>
-        </ul>
+       <ul class="about-list">
+  <li class="about-item" data-key="conexion">Conexión y propósito</li>
+  <li class="about-item" data-key="curiosidad">Explorar la curiosidad</li>
+  <li class="about-item" data-key="contenido">Contenido místico y espiritual</li>
+  <li class="about-item" data-key="experiencia">Vive una nueva experiencia</li>
+</ul>
+
+<!-- Modal de "Nosotros" -->
+<div id="aboutModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="aboutModalTitle">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closePost('aboutModal')" aria-label="Cerrar">×</button>
+    <span id="aboutModalTag" class="tag">Nosotros</span>
+    <h2 id="aboutModalTitle"></h2>
+    <div id="aboutModalMeta" class="meta"></div>
+    <div id="aboutModalBody" class="modal-body"></div>
+  </div>
+</div>
+
       </div>
     </div>
     <button class="btn-back" onclick="goHome()">Volver</button>
