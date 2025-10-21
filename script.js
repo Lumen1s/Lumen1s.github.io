@@ -735,6 +735,65 @@ function searchPosts(query){
    ========================= */
 function formatearFecha(iso){ try{ const d=new Date(iso+"T00:00:00"); return d.toLocaleDateString("es-CO",{year:"numeric",month:"long",day:"numeric"});}catch{return iso;} }
 
+/* ====== Contenidos de "Nosotros" (editable) ======
+   Cambia libremente los <p>, añade <h3>, listas, imágenes <img src="assets/img/...">, etc. */
+const aboutItems = {
+  Conexion: {
+    titulo: "Conexión",
+    contenido: `
+      <p>El destino es más divertido cuando lo descifras en compañía. Sabemos que hay gente por ahí preguntándole lo mismo al universo que tú, buscando las mismas señales extrañas en su café o descifrando las respuestas aleatorias que les dio el buscador. Por eso, esta sección es tu portal para dejar de sentirte solo en tu viaje. Lee los artículos, comenta tus teorías más locas, y comparte las respuestas que Lumen te entregó. Usa nuestro foro para conectar con tu Comunidad Cósmica: personas que hablan tu idioma misterioso, alternativo y están listas para debatir sobre cualquier cosa, desde el último tarot virtual hasta el misterio de por qué ese match te dejó en visto.</p>
+
+    `
+  },
+  Propósito: {
+    titulo: "Propósito",
+    contenido: `
+      <p>En Lumen, nuestro propósito es el entretenerte. Olvídate de la presión de tener todo resuelto. Esta sección es un espacio seguro y didáctico para que te permitas preguntar cualquier cosa, desde las dudas más existenciales hasta el chisme más irrelevante. Nuestro buscador del destino está aquí para darte una respuesta aleatoria y divertida que te inspire a pensar, reír o simplemente dar un giro a tu día. Queremos que leas, explores y compartas ese resultado inesperado con otros. Porque la mejor forma de encontrar una dirección es divirtiéndose en el camino</p>
+     
+    `
+  },
+  Experiencia: {
+    titulo: "Experiencia",
+    contenido: `
+      <p>En Lumen, la experiencia es un viaje entre la intuición y la curiosidad.
+Aquí no solo lees el destino, lo vives.</p>
+      <p>Explora nuestro blog, donde lo místico se mezcla con lo cotidiano: lecturas ligeras, símbolos que cobran sentido y rituales que puedes hacer con una vela y un poco de intención.</p>
+      <p>Consulta el oráculo, un espacio para hacerle preguntas al universo y recibir respuestas tan honestas como misteriosas, a veces sabias, a veces sarcásticas, pero siempre sincronizadas contigo.</p>
+      <p>Todo en un mismo lugar, para que navegar por Lumen se sienta como entrar a un rincón de calma, humor y magia digital.</p>
+    `
+  },
+  Contenido: {
+    titulo: "Contenido",
+    contenido: `
+      <p>Lo que encuentras en Lumen no son respuestas cerradas, sino puertas que se abren.
+Textos, ideas y señales que invitan a mirar más allá de lo evidente, a jugar con el misterio y a hacer las paces con lo desconocido.</p>
+      <p>Aquí hay reflexiones que iluminan, frases que hacen reír, símbolos que despiertan algo, y momentos que se sienten como un guiño del universo.
+Un espacio para quienes disfrutan perderse entre lo espiritual y lo cotidiano, lo profundo y lo absurdo.</p>
+<p>Nada está escrito, pero todo puede decirte algo.</p>
+    `
+  }
+};
+
+/* ====== Abrir modal de "Nosotros" ====== */
+function openAbout(key) {
+  const item = aboutItems[key];
+  if (!item) return;
+  const titleEl = document.getElementById("aboutModalTitle");
+  const bodyEl  = document.getElementById("aboutModalBody");
+  const metaEl  = document.getElementById("aboutModalMeta");
+
+  if (titleEl) titleEl.textContent = item.titulo || "Nosotros";
+  if (metaEl)  metaEl.textContent  = ""; // si quieres fecha o autor, puedes poner algo aquí
+  if (bodyEl)  bodyEl.innerHTML    = item.contenido || "";
+
+  const modal = document.getElementById("aboutModal");
+  if (modal) {
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  }
+}
+
+
 /* =========================
    Render tarjetas
    ========================= */
