@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema del foro — LUMEN</title>
+  <link rel="stylesheet" href="forum.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="forum-header">
+    <h1><a href="forum.html" class="back-link">← Foro LUMEN</a></h1>
+    <div id="user-info"></div>
+  </header>
+
+  <main class="forum-main">
+    <section id="thread-container">
+      <h2 id="thread-title"></h2>
+      <p id="thread-content"></p>
+      <div id="thread-meta" class="meta"></div>
+    </section>
+
+    <section id="comments-section">
+      <h3>Comments</h3>
+      <div id="comments-list"></div>
+
+      <div id="add-comment" hidden>
+        <textarea id="commentText" placeholder="Write your reply..."></textarea>
+        <button id="commentBtn">Comment</button>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>✨ LUMEN — conversaciones místicas ✨</p></footer>
+
+  <script type="module" src="thread.js"></script>
+</body>
+</html>
