@@ -111,3 +111,26 @@ button:hover { filter: brightness(1.1); }
   cursor: pointer;
   font-weight: 700;
 }
+.anon-box {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  margin: 1rem auto;
+}
+.anon-box input {
+  padding: .5rem;
+  border-radius: 8px;
+  border: 1px solid var(--pale-silver);
+  background: rgba(206,178,189,0.1);
+  color: var(--dust-storm);
+}
+.anon-box button {
+  background: var(--mountbatten-pink);
+  border: 1px solid rgba(206,178,189,.4);
+  color: var(--dust-storm);
+  padding: .4rem .8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
