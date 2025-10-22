@@ -8,33 +8,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="forum-header">
-    <h1>💬 Foro LUMEN</h1>
-    <div id="user-info"></div>
-  </header>
-<div id="anon-login" class="anon-box">
-  <input type="text" id="anonName" placeholder="Escribe tu nombre..." />
-  <button id="anonLoginBtn">Entrar sin cuenta</button>
-</div>
+  <!-- Pantalla de bienvenida -->
+  <div id="welcome-screen" class="welcome active">
+    <h1 class="logo-glow">LUMEN</h1>
+    <p class="welcome-text">Bienvenido a nuestro foro</p>
+    <div class="login-options">
+      <button id="loginGoogleBtn">Sign in with Google</button>
+      <button id="loginAnonBtn">Entrar sin cuenta</button>
+    </div>
+  </div>
 
-  <main class="forum-main">
-    <!-- Crear tema -->
-    <section class="create-thread" id="createThreadSection" hidden>
-      <h2>Create a new topic</h2>
-      <input type="text" id="threadTitle" placeholder="Topic title" />
-      <textarea id="threadContent" placeholder="Write the first message..."></textarea>
-      <button id="createThreadBtn">Publish</button>
-    </section>
+  <!-- Contenido del foro (oculto hasta login) -->
+  <div id="forum-container" class="hidden">
+    <header class="forum-header">
+      <h1>💬 Foro LUMEN</h1>
+      <div id="user-info"></div>
+    </header>
 
-    <!-- Lista de temas -->
-    <section class="threads" id="threadsList"></section>
-  </main>
+    <main class="forum-main">
+      <!-- Crear tema -->
+      <section class="create-thread" id="createThreadSection">
+        <h2>Crea un nuevo tema</h2>
+        <input type="text" id="threadTitle" placeholder="Título del tema" />
+        <textarea id="threadContent" placeholder="Escribe el primer mensaje..."></textarea>
+        <button id="createThreadBtn">Publicar</button>
+      </section>
 
-  <footer>
-    <p>✨ LUMEN — comunidad mística ✨</p>
-  </footer>
+      <!-- Lista de temas -->
+      <section class="threads" id="threadsList"></section>
+    </main>
+
+    <footer>
+      <p>✨ LUMEN — comunidad mística ✨</p>
+    </footer>
+  </div>
 
   <script type="module" src="forum.js"></script>
 </body>
 </html>
+
 
