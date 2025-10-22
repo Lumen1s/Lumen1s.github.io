@@ -58,18 +58,27 @@ function enterForum(user) {
 // === MOSTRAR USUARIO Y LOGOUT ===
 function renderUser(user) {
   const name = user?.displayName || "Anónimo";
+
+  // Siempre mostramos Logout (para Google y para anónimo)
   userInfo.innerHTML = `
-    <span>${name}</span>
-    ${user?.email ? `<button id="logoutBtn">Logout</button>` : ""}
+    <div class="user-box">
+      <span class="user-name">${name}</span>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
   `;
-  const logoutBtn = document.getElementById("logoutBtn");
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", async () => {
+
+  document.getElementById("logoutBtn").addEventListener("click", async () => {
+    // Si hay sesión de Google, cerramos sesión
+    if (auth.currentUser && auth.currentUser.email) {
       await signOut(auth);
-      location.reload();
-    });
-  }
+    }
+    // Si es anónimo, limpiamos su nombre guardado
+    localStorage.removeItem("anonName");
+    // Volver a la pantalla de bienvenida
+    location.reload();
+  });
 }
+
 
 // === DETECTAR SESIÓN ACTIVA ===
 onAuthStateChanged(auth, (user) => {
@@ -140,6 +149,7 @@ function subscribeThreads() {
     });
   });
 }
+
 
 
 
