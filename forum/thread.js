@@ -4,14 +4,15 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signO
 import { getFirestore, doc, getDoc, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp, deleteDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDUZxlkCyK1gaujf27qQV--bqeOwmcnu8U",
+  apiKey: "AIzaSyDUZxlkCyKI9aujf27qQV_-bqeOwmcnu8U",
   authDomain: "lumen-foro.firebaseapp.com",
   projectId: "lumen-foro",
-  storageBucket: "lumen-foro.appspot.com",
-  messagingSenderId: "868961314091",
-  appId: "1:868961314091:web:8fc2c50eb549bc31ae25be",
+  storageBucket: "lumen-foro.firebasestorage.app",
+  messagingSenderId: "868961310491",
+  appId: "1:868961310491:web:8fc2c50eb549bc31ae25be",
   measurementId: "G-D6M9EKJFDL"
 };
+
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
@@ -120,4 +121,5 @@ onSnapshot(q, (snapshot) => {
     });
   });
 });
+
 
