@@ -45,6 +45,20 @@ function renderUser(user) {
   });
   createSection.hidden = false;
 }
+let anonUser = null;
+
+// Login anónimo
+const anonBtn = document.getElementById("anonLoginBtn");
+if (anonBtn) {
+  anonBtn.addEventListener("click", () => {
+    const name = document.getElementById("anonName").value.trim();
+    if (!name) return alert("Escribe un nombre para continuar.");
+    anonUser = { displayName: name, uid: "anon-" + Date.now(), email: null };
+    document.getElementById("anon-login").style.display = "none";
+    renderUser(anonUser);
+    subscribeThreads();
+  });
+}
 
 // Sesión
 onAuthStateChanged(auth, (user) => {
@@ -57,11 +71,11 @@ document.getElementById("createThreadBtn").addEventListener("click", async () =>
   const title = document.getElementById("threadTitle").value.trim();
   const content = document.getElementById("threadContent").value.trim();
   if (!title || !content) return alert("Completa todos los campos.");
-  const user = auth.currentUser;
+  const user = auth.currentUser || anonUser;
   await addDoc(collection(db, "threads"), {
     title, content,
-    author: user.displayName,
-    authorId: user.uid,
+    author: user?.displayName || "Anónimo",
+authorId: user?.uid || null,
     authorEmail: user.email,
     createdAt: serverTimestamp(),
     flagged: false
@@ -117,5 +131,6 @@ function subscribeThreads() {
     });
   });
 }
+
 
 
