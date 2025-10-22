@@ -133,4 +133,75 @@ button:hover { filter: brightness(1.1); }
   cursor: pointer;
   font-weight: 700;
 }
+/* ==== Pantalla de bienvenida ==== */
+body {
+  background: radial-gradient(ellipse at bottom, #572E54 0%, #482A41 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  color: #E2D2C8;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  transition: opacity 1s ease;
+}
+
+.welcome.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo-glow {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  color: #E2D2C8;
+  text-shadow: 0 0 25px #8E7692, 0 0 50px #CEB2BD;
+  animation: glow 4s infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #8E7692, 0 0 20px #CEB2BD; }
+  100% { text-shadow: 0 0 30px #E2D2C8, 0 0 60px #8E7692; }
+}
+
+.welcome-text {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  color: #CEB2BD;
+  letter-spacing: 1px;
+}
+
+.login-options {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.login-options button {
+  background: #8E7692;
+  color: #E2D2C8;
+  border: 1px solid rgba(206,178,189,.4);
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform .2s;
+}
+.login-options button:hover {
+  transform: scale(1.05);
+}
+
+/* ==== Ocultar y mostrar foro ==== */
+.hidden {
+  display: none !important;
+}
+
 
