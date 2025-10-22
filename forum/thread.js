@@ -1,8 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { getFirestore, doc, getDoc, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp, deleteDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-// Tu config real (de Firebase)
 const firebaseConfig = {
   apiKey: "AIzaSyDUZxlkCyK1gaujf27qQV--bqeOwmcnu8U",
   authDomain: "lumen-foro.firebaseapp.com",
@@ -14,6 +14,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
@@ -31,6 +32,18 @@ if (!threadId) {
   document.body.innerHTML = "<h2>Topic not found.</h2>";
   throw new Error("Missing thread id");
 }
+
+logEvent(analytics, "view_thread", { threadId }); // 🔥 registrar vista de tema
+
+function renderLoginButton() {
+  userInfo.innerHTML = `<button id="loginBtn">Sign in with Google</button>`;
+  document.getElementById("loginBtn").addEventListener("click", async () => {
+    const provider = new GoogleAuthProvider();
+    await signInWithPopup(auth, provider);
+    logEvent(analytics, "login", { method: "google" });
+  });
+}
+
 
 // Login / logout
 function renderLoginButton() {
@@ -75,6 +88,7 @@ document.getElementById("commentBtn").addEventListener("click", async () => {
     authorEmail: user.email,
     createdAt: serverTimestamp()
   });
+  logEvent(analytics, "comment_added", { threadId });
   commentText.value = "";
 });
 
@@ -106,3 +120,4 @@ onSnapshot(q, (snapshot) => {
     });
   });
 });
+
