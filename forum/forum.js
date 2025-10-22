@@ -1,9 +1,10 @@
 // Foro LUMEN — lista de temas
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { getFirestore, collection, addDoc, doc, deleteDoc, onSnapshot, query, orderBy, serverTimestamp, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-// Tu config real (de Firebase)
+// Tu config real
 const firebaseConfig = {
   apiKey: "AIzaSyDUZxlkCyK1gaujf27qQV--bqeOwmcnu8U",
   authDomain: "lumen-foro.firebaseapp.com",
@@ -15,10 +16,10 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app); // 🔥 activamos Google Analytics
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// Admin para moderar
 const ADMIN_EMAIL = "fabian.alba.off@gmail.com";
 
 const userInfo = document.getElementById("user-info");
@@ -30,19 +31,23 @@ function renderLoginButton() {
   userInfo.innerHTML = `<button id="loginBtn">Sign in with Google</button>`;
   document.getElementById("loginBtn").addEventListener("click", async () => {
     const provider = new GoogleAuthProvider();
-    await signInWithPopup(auth, provider);
+    const result = await signInWithPopup(auth, provider);
+    logEvent(analytics, "login", { method: "google" }); // registro de login
   });
 }
 function renderUser(user) {
   userInfo.innerHTML = `<span>${user.displayName}</span>
                         <button id="logoutBtn">Logout</button>`;
-  document.getElementById("logoutBtn").addEventListener("click", async () => { await signOut(auth); });
+  document.getElementById("logoutBtn").addEventListener("click", async () => { 
+    await signOut(auth);
+    logEvent(analytics, "logout");
+  });
   createSection.hidden = false;
 }
 
 // Sesión
 onAuthStateChanged(auth, (user) => {
-  if (user) { renderUser(user); subscribeThreads(); }
+  if (user) { renderUser(user); subscribeThreads(); logEvent(analytics, "user_online"); }
   else { renderLoginButton(); createSection.hidden = true; subscribeThreads(); }
 });
 
@@ -60,9 +65,11 @@ document.getElementById("createThreadBtn").addEventListener("click", async () =>
     createdAt: serverTimestamp(),
     flagged: false
   });
+  logEvent(analytics, "create_thread", { title }); // 🔥 evento Analytics
   document.getElementById("threadTitle").value = "";
   document.getElementById("threadContent").value = "";
 });
+
 
 // Listado en tiempo real
 let unsubscribe = null;
@@ -109,3 +116,4 @@ function subscribeThreads() {
     });
   });
 }
+
